@@ -6,10 +6,16 @@ export default {
   ],
   theme: {
     backgroundColor: {
-     bgColor: "var(--bg)"
+      bgColor: "var(--bg)",
+      bgColorI: "var(--textI)",
+      bgColorII: "var(--textII)",
+
+      
     },
     colors: {
+      text: "var(--bg)",
       textI: "var(--textI)",
+      textII: "var(--textII)",
       
     },
     extend: {},

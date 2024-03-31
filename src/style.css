@@ -8,11 +8,14 @@
     :root {
      --bg: #ffffff;   
      --textI: #000000;
+     --textII: #666666;
     }
 
     [data-theme="dark"] {
-        --bg: #000000;
-        --textI: #ffffff;
+     --bg: #000000;
+     --textI: #ffffff;
+     --textII: #bbbbbb;
+
     }
 
     body{
