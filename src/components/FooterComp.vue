@@ -1,4 +1,19 @@
 <script setup></script>
 <template>
-    <section class=""></section>
+    <footer class="py-10 flex flex-col items-center justify-center">
+        <ul class="flex flex-wrap items-center justify-center gap-6 md:text-2xl text-base md:py-9 py-5">
+            <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
+                    href="#about">About</a>
+            </li>
+            <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
+                    href="#skills">Tools</a></li>
+            <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
+                    href="#project">Projects</a></li>
+            <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
+                    href="#contact">Contact</a></li>
+        </ul>
+        <p class="text-textII text-center underline decoration-2 underline-offset-2">
+            Copyright © 2023 John Doe. All Rights Reserved.
+        </p>
+    </footer>
 </template>

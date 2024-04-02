@@ -1,9 +1,9 @@
 <script setup>
-import { AcademicCapIcon, StarIcon } from '@heroicons/vue/24/solid'
+import { AcademicCapIcon, StarIcon, ChevronDoubleDownIcon } from '@heroicons/vue/24/solid'
 import SectionHeaderComp from '../components/SectionHeaderComp.vue';
 </script>
 <template>
-    <section class="space-y-5 relative" id="about">
+    <section class="md:py-16 py-10 space-y-5 relative md:w-[85%] w-full mx-auto" id="about">
         <SectionHeaderComp mainText="about me" preText="get to know more" />
         <div class="space-y-10">
             <div class="flex flex-col md:flex-row items-center justify-center w-full gap-5 text-center">
@@ -21,7 +21,9 @@ import SectionHeaderComp from '../components/SectionHeaderComp.vue';
                 </div>
             </div>
 
-            <p class="text-justify text-textII">I'm David, a passionate frontend web developer with a knack for turning
+            <p class="text-justify text-textI/5 font-medium">I'm David, a passionate frontend web developer with a
+                knack for
+                turning
                 digital
                 dreams into reality. With
                 a
@@ -33,6 +35,9 @@ import SectionHeaderComp from '../components/SectionHeaderComp.vue';
                 where innovation knows no bounds, and every click tells a story. Let's make the web a more beautiful and
                 functional place together, one line of code at a time.</p>
         </div>
+        <a class="absolute bottom-0 right-0 cursor-pointer" href="#tools">
+            <ChevronDoubleDownIcon class="h-8 w-8" />
+        </a>
 
     </section>
 </template>

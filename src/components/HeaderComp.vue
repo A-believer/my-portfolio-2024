@@ -12,14 +12,14 @@ function setToggleMenu(val) {
         <h1 class="lg:text-[32px] text-2xl">David Abolade</h1>
         <nav class="hidden lg:flex">
             <ul class="flex items-center gap-x-6">
-                <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
+                <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"><a
                         href="#about">About</a>
                 </li>
-                <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
-                        href="#experience">Experience</a></li>
-                <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
+                <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"><a
+                        href="#tools">Tools</a></li>
+                <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"><a
                         href="#project">Projects</a></li>
-                <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
+                <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"><a
                         href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -27,10 +27,10 @@ function setToggleMenu(val) {
         <nav class="lg:hidden flex">
             <div>
                 <button v-if="!toggleMenu" @click="setToggleMenu(true)">
-                    <Bars3Icon class="w-8 h-8 hover:text-[#666666] transition-all duration-600" />
+                    <Bars3Icon class="w-8 h-8 hover:text-textII transition-all duration-600" />
                 </button>
                 <button v-else @click="setToggleMenu(false)">
-                    <XMarkIcon class="w-8 h-8 hover:text-[#666666] transition-all duration-600" />
+                    <XMarkIcon class="w-8 h-8 hover:text-textII transition-all duration-600" />
                 </button>
             </div>
             <transition enter-from-class="translate-x-5 opacity-0"
@@ -39,20 +39,16 @@ function setToggleMenu(val) {
                 leave-to-class="translate-x-5 opacity-0">
                 <ul v-if="toggleMenu"
                     class="bg-bgColor absolute border-y-2 right-0 md:top-[90px] top-[70px] flex flex-col items-center justify-center gap-y-8 p-8 text-right ">
-                    <li
-                        class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600">
+                    <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
                         <a href="#about">About</a>
                     </li>
-                    <li
-                        class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600">
-                        <a href="#experience">Experience</a>
+                    <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
+                        <a href="#tools">Tools</a>
                     </li>
-                    <li
-                        class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600">
+                    <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
                         <a href="#project">Projects</a>
                     </li>
-                    <li
-                        class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-700">
+                    <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-700">
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>

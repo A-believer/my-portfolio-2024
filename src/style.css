@@ -6,15 +6,15 @@
 @layer base {
 
     :root {
-     --bg: #ffffff;   
-     --textI: #000000;
+     --bg: #eeeeee;   
+     --textI: #111111;
      --textII: #666666;
     }
 
     [data-theme="dark"] {
-     --bg: #000000;
-     --textI: #ffffff;
-     --textII: #bbbbbb;
+     --bg: #111111;
+     --textI: #eeeeee;
+     --textII: #555555;
 
     }
 
