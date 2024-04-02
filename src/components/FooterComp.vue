@@ -6,7 +6,7 @@
                     href="#about">About</a>
             </li>
             <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
-                    href="#skills">Tools</a></li>
+                    href="#tools">Tools</a></li>
             <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
                     href="#project">Projects</a></li>
             <li class="hover:text-[#666666] hover:underline underline-offset-[16px] transition-all duration-600"><a
