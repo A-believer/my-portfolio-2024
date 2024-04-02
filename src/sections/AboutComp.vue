@@ -8,13 +8,13 @@ import SectionHeaderComp from '../components/SectionHeaderComp.vue';
         <div class="space-y-10">
             <div class="flex flex-col md:flex-row items-center justify-center w-full gap-5 text-center">
                 <div
-                    class="flex flex-col items-center justify-center lg:w-[30%] w-[80%] border border-textII p-6 rounded-[32px] shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
+                    class="flex flex-col items-center justify-center lg:w-[30%] w-[80%] p-6 rounded-[32px] shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
                     <StarIcon class="w-10 h-10" />
                     <p class="text-[18px] leading-[28px] font-bold">Experience</p>
                     <p class="text-textII">2+ Years</p>
                 </div>
                 <div
-                    class="flex flex-col items-center justify-center lg:w-[30%] w-[80%] border border-textII p-6 rounded-[32px] shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
+                    class="flex flex-col items-center justify-center lg:w-[30%] w-[80%] p-6 rounded-[32px] shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
                     <AcademicCapIcon class="w-10 h-10" />
                     <p class="text-[18px] leading-[28px] font-bold">Education</p>
                     <p class="text-textII">B.Sc. Bachelor's Degree</p>

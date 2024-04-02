@@ -8,7 +8,6 @@ import ContactComp from './sections/ContactComp.vue';
 import { useTheme } from "./useTheme"
 import { SunIcon, MoonIcon } from '@heroicons/vue/24/solid'
 import HeroComp from './sections/HeroComp.vue';
-import TrailingCursor from './components/TrailingCursor.vue';
 
 const { theme, toggleTheme } = useTheme()
 </script>
@@ -26,7 +25,7 @@ const { theme, toggleTheme } = useTheme()
         <ContactComp />
         <FooterComp />
 
-        <button class="fixed bottom-2 right-2 transition-all duration-600" @click="toggleTheme">
+        <button class="fixed bottom-4 left-4 transition-all duration-600" @click="toggleTheme">
           <div v-if="theme === 'light'">
             <SunIcon class="h-8 w-8" />
           </div>

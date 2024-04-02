@@ -43,7 +43,7 @@ const projectArray = ref([
         <SectionHeaderComp mainText="projects" preText="browse my recent" />
         <div class="w-full flex flex-wrap items-center gap-10 justify-center">
             <div v-for="project in projectArray"
-                class="flex flex-col items-center gap-5 justify-center border border-textII rounded-[24px] p-4 shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
+                class="flex flex-col items-center gap-5 justify-center rounded-[24px] p-4 shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
 
 
                 <img :src="project.image" :alt="project.id" class="w-80 h-40 rounded-[10px] shadow-lg shadow-textII">
