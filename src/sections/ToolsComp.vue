@@ -11,13 +11,13 @@ import ToolComp from '../components/ToolComp.vue';
         <SectionHeaderComp mainText="tools" preText="I use these" />
         <div class="flex md:flex-row flex-col gap-10 font-bold text-3xl leading-[42px] w-full">
             <div
-                class="rounded-[32px] p-6 flex flex-col items-center gap-y-8 w-full shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
+                class="border border-bdr rounded-[32px] p-6 flex flex-col items-center gap-y-8 w-full shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
                 <h2 class="text-center text-textII underline decoration-4 underline-offset-2">Languages</h2>
                 <LanguageComp />
 
             </div>
             <div
-                class="rounded-[32px] p-6 flex flex-col items-center gap-y-8 w-full h-fit shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
+                class="border border-bdr rounded-[32px] p-6 flex flex-col items-center gap-y-8 w-full h-fit shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
                 <h2 class="text-center text-textII underline decoration-4 underline-offset-2">Tools</h2>
                 <ToolComp />
             </div>

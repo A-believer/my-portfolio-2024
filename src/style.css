@@ -9,12 +9,14 @@
      --bg: #eeeeee;   
      --textI: #111111;
      --textII: #666666;
+     --border: #cccccc;
     }
 
     [data-theme="dark"] {
      --bg: #111111;
      --textI: #eeeeee;
      --textII: #555555;
+     --border: #333333;
 
     }
 

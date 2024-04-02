@@ -43,7 +43,7 @@ const projectArray = ref([
         <SectionHeaderComp mainText="projects" preText="browse my recent" />
         <div class="w-full flex flex-wrap items-center gap-10 justify-center">
             <div v-for="project in projectArray"
-                class="flex flex-col items-center gap-5 justify-center rounded-[24px] p-4 shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
+                class="flex flex-col items-center gap-5 justify-center border border-bdr rounded-[24px] p-4 shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
 
 
                 <img :src="project.image" :alt="project.id" class="w-80 h-40 rounded-[10px] shadow-lg shadow-textII">
@@ -52,7 +52,7 @@ const projectArray = ref([
 
 
                 <div class="flex items-center  gap-x-8 text-sm">
-                    <a class="flex items-center gap-x-2 p-2 border border-textII hover:bg-bgColorII hover:text-textI rounded-3xl"
+                    <a class="flex items-center gap-x-2 p-2 border border-bdr hover:bg-bgColorII hover:text-textI rounded-3xl"
                         target="_blank" :href="project.githubUrl">
                         <Icon icon="teenyicons:github-solid" />
                         <span>Github</span>

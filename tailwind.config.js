@@ -16,6 +16,7 @@ export default {
       text: "var(--bg)",
       textI: "var(--textI)",
       textII: "var(--textII)",
+      bdr: "var(--border)"
       
     },
     extend: {},
