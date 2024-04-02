@@ -13,7 +13,7 @@
                     href="#contact">Contact</a></li>
         </ul>
         <p class="text-textII text-center underline decoration-2 underline-offset-2">
-            Copyright © 2023 John Doe. All Rights Reserved.
+            Copyright © 2024 David Abolade. All Rights Reserved.
         </p>
     </footer>
 </template>
