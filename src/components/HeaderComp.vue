@@ -8,7 +8,7 @@ function setToggleMenu(val) {
 }
 </script>
 <template>
-    <header class="flex items-center justify-between text-2xl xl:py-10 md:py-8 py-5 w-full">
+    <header class="flex items-center justify-between text-2xl xl:py-10 md:py-8 py-5 w-full z-40">
         <h1 class="lg:text-[32px] text-2xl">David Abolade</h1>
         <nav class="hidden lg:flex">
             <ul class="flex items-center gap-x-6">
@@ -24,7 +24,7 @@ function setToggleMenu(val) {
             </ul>
         </nav>
 
-        <nav class="lg:hidden flex">
+        <nav class="lg:hidden flex z-50">
             <div>
                 <button v-if="!toggleMenu" @click="setToggleMenu(true)">
                     <Bars3Icon class="w-8 h-8 hover:text-textII transition-all duration-600" />
@@ -38,7 +38,7 @@ function setToggleMenu(val) {
                 leave-active-class="transition-all duration-800 cubic-bezier(1, 0.5, 0.8, 1)"
                 leave-to-class="translate-x-5 opacity-0">
                 <ul v-if="toggleMenu"
-                    class="bg-bgColor absolute border-y-2 right-0 md:top-[90px] top-[70px] flex flex-col items-center justify-center gap-y-8 p-8 text-right ">
+                    class="bg-bgColor absolute border-y-2 right-0 md:top-[90px] top-[70px] flex flex-col items-center justify-center gap-y-8 p-8 text-right z-50">
                     <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
                         <a href="#about">About</a>
                     </li>
