@@ -10,7 +10,7 @@ import { ChevronDoubleDownIcon } from '@heroicons/vue/24/solid'
 <template>
     <section class="flex lg:flex-row flex-col justify-center items-center gap-x-[80px] gap-y-10 py-10 relative">
         <img src="../assets/david.jpg" alt="image"
-            class="xl:w-[400px] xl:h-[400px] md:w-[275px] md:h-[275px] w-[150px] h-[150px] rounded-full object-contain" />
+            class="xl:w-[400px] xl:h-[400px] md:w-[275px] md:h-[275px] w-[150px] h-[150px] rounded-full object-contain shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300" />
         <div class="flex flex-col items-center justify-center">
             <SectionHeaderComp mainText="David Abolade" preText="Hello, I'm" />
             <h3
