@@ -39,7 +39,7 @@ const projectArray = ref([
 ])
 </script>
 <template>
-    <section class="md:py-16 py-10 space-y-5 relative md:w-[85%] w-full mx-auto" id="project">
+    <section class="py-16 space-y-5 relative md:w-[85%] w-full mx-auto" id="project">
         <SectionHeaderComp mainText="projects" preText="browse my recent" />
         <div class="w-full flex flex-wrap items-center gap-10 justify-center">
             <div v-for="project in projectArray"
