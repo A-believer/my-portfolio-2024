@@ -40,16 +40,16 @@ function setToggleMenu(val) {
                 <ul v-if="toggleMenu"
                     class="bg-bgColor absolute border-y-2 right-0 md:top-[90px] top-[70px] flex flex-col items-center justify-center gap-y-8 p-8 text-right z-50">
                     <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
-                        <a href="#about">About</a>
+                        <a @click="setToggleMenu(false)" href="#about">About</a>
                     </li>
                     <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
-                        <a href="#tools">Tools</a>
+                        <a @click="setToggleMenu(false)" href="#tools">Tools</a>
                     </li>
                     <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
-                        <a href="#project">Projects</a>
+                        <a @click="setToggleMenu(false)" href="#project">Projects</a>
                     </li>
                     <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-700">
-                        <a href="#contact">Contact</a>
+                        <a @click="setToggleMenu(false)" href="#contact">Contact</a>
                     </li>
                 </ul>
             </transition>
