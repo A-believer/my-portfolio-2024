@@ -7,6 +7,7 @@ import labwox from "../assets/labwox.png"
 import teachmate from "../assets/teachmate-todo.png"
 import dashboard from "../assets/dashboard.png"
 import getlinked from "../assets/getLinked.png"
+import shoppingCart from "../assets/shopping-cart.png"
 
 const projectArray = ref([
     {
@@ -36,6 +37,13 @@ const projectArray = ref([
         githubUrl: "https://github.com/A-believer/get-linked",
         liveUrl: 'https://get-linked-ai.vercel.app/'
     },
+    {
+        id: 4,
+        name: 'Shopping Cart',
+        image: shoppingCart,
+        githubUrl: "https://github.com/A-believer/ecommerce-pms",
+        liveUrl: 'https://ecommerce-pms.vercel.app/'
+    },
 ])
 </script>
 <template>
@@ -43,7 +51,7 @@ const projectArray = ref([
         <SectionHeaderComp mainText="projects" preText="browse my recent" />
         <div class="w-full flex flex-wrap items-center gap-10 justify-center">
             <div v-for="project in projectArray"
-                class="flex flex-col items-center gap-5 justify-center border border-bdr rounded-[24px] p-4 shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
+                class="flex flex-col items-center gap-5 justify-center border border-bdr rounded-[24px] p-4 shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300" :key="project.id">
 
 
                 <img :src="project.image" :alt="project.id" class="w-80 h-40 rounded-[10px] shadow-lg shadow-textII">

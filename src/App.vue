@@ -20,8 +20,8 @@ const { theme, toggleTheme } = useTheme()
         <HeaderComp />
         <HeroComp />
         <AboutComp />
-        <ToolsComp />
         <ProjectComp />
+        <ToolsComp />
         <ContactComp />
         <FooterComp />
 
