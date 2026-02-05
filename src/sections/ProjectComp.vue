@@ -1,61 +1,62 @@
 <script setup>
-import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
-import SectionHeaderComp from "../components/SectionHeaderComp.vue";
+import { ChevronDownIcon } from "@heroicons/vue/24/outline";
 import { Icon } from "@iconify/vue";
 import { ref } from "vue";
-import labwox from "../assets/labwox.png";
-import teachmate from "../assets/teachmate-todo.png";
-import dashboard from "../assets/dashboard.png";
-import getlinked from "../assets/getLinked.png";
-import shoppingCart from "../assets/shopping-cart.png";
 
 const projectArray = ref([
   {
     id: 0,
     name: "Market Master USA",
-    image: dashboard, // Using placeholder for now, would be ideal to generate or get a screenshot
-    githubUrl: "https://github.com/A-believer", // User didn't provide specific repo, using profile
+    description: "E-commerce platform with advanced analytics and inventory management",
+    tags: ["React", "Next.js", "Tailwind"],
+    githubUrl: "https://github.com/A-believer",
     liveUrl: "https://marketmasterusa.com",
   },
   {
     id: 1,
     name: "Dudurewa",
-    image: shoppingCart, // Using placeholder
+    description: "Modern restaurant website with online ordering system",
+    tags: ["Vue", "Tailwind", "Firebase"],
     githubUrl: "https://github.com/A-believer",
     liveUrl: "https://dudurewas-kitchen.vercel.app/",
   },
   {
     id: 2,
     name: "Hernexcube",
-    image: labwox, // Using placeholder
+    description: "Corporate website with dynamic content management",
+    tags: ["Vue", "Vite", "CSS"],
     githubUrl: "https://github.com/A-believer",
     liveUrl: "https://hernexcube.vercel.app/",
   },
   {
     id: 3,
     name: "Labwox",
-    image: labwox,
+    description: "Laboratory management system with real-time updates",
+    tags: ["React", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/A-believer/Labwox",
     liveUrl: "https://labwox.com.ng/",
   },
   {
     id: 4,
     name: "TeachMate Todo",
-    image: teachmate,
+    description: "AI-powered task management application for educators",
+    tags: ["React", "TypeScript", "Tailwind"],
     githubUrl: "https://github.com/A-believer/teachmateai-task-manager",
     liveUrl: "https://teachmateai-task-manager.vercel.app/",
   },
   {
     id: 5,
     name: "Dashboard",
-    image: dashboard,
+    description: "Analytics dashboard with interactive data visualizations",
+    tags: ["React", "Chart.js", "Tailwind"],
     githubUrl: "https://github.com/A-believer/geegpay-dashboard",
     liveUrl: "https://geegpay-dashboard-sigma.vercel.app/",
   },
   {
     id: 6,
     name: "GetLinked AI",
-    image: getlinked,
+    description: "Hackathon registration platform with modern UI",
+    tags: ["React", "Framer Motion", "CSS"],
     githubUrl: "https://github.com/A-believer/get-linked",
     liveUrl: "https://get-linked-ai.vercel.app/",
   },
@@ -63,46 +64,94 @@ const projectArray = ref([
 </script>
 <template>
   <section
-    class="py-16 space-y-5 relative md:w-[85%] w-full mx-auto"
+    class="py-32 space-y-16 relative w-full"
     id="project"
   >
-    <SectionHeaderComp mainText="projects" preText="browse my recent" />
-    <div class="w-full flex flex-wrap items-center gap-10 justify-center">
+    <!-- Section Header -->
+    <div class="text-center space-y-4 animate-on-scroll">
+      <p class="text-accent text-sm md:text-base font-semibold tracking-[0.2em] uppercase">
+        Browse my recent
+      </p>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-textI">
+        Projects
+      </h2>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-2 gap-8 px-4">
       <div
         v-for="project in projectArray"
-        class="flex flex-col items-center gap-5 justify-center border border-bdr rounded-[24px] p-4 shadow-lg hover:shadow-2xl shadow-textII hover:translate-x-1 hover:translate-y-1 transition-all duration-300"
         :key="project.id"
+        class="group animate-on-scroll"
       >
-        <img
-          :src="project.image"
-          :alt="project.id"
-          class="w-80 h-40 rounded-[10px] shadow-lg shadow-textII"
-        />
-        <p class="text-2xl font-bold">{{ project.name }}</p>
+        <div class="h-full flex flex-col rounded-2xl border border-border bg-bg-secondary/30 backdrop-blur-sm overflow-hidden hover:border-accent/50 transition-all duration-500 hover:shadow-2xl">
+          <!-- Project Preview with iframe -->
+          <div class="relative w-full h-64 bg-border/20 overflow-hidden">
+            <iframe
+              :src="project.liveUrl"
+              :title="project.name"
+              class="w-full h-full scale-50 origin-top-left"
+              style="width: 200%; height: 200%;"
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin"
+            ></iframe>
+            <div class="absolute inset-0 bg-gradient-to-t from-bg-secondary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
 
-        <div class="flex items-center gap-x-8 text-sm">
-          <a
-            class="flex items-center gap-x-2 p-2 border border-bdr hover:bg-bgColorII hover:text-textI rounded-3xl"
-            target="_blank"
-            :href="project.githubUrl"
-          >
-            <Icon icon="teenyicons:github-solid" />
-            <span>Github</span>
-          </a>
-          <a
-            class="flex items-center gap-x-2 p-2 border border-textII hover:bg-bgColorII hover:text-textI rounded-3xl"
-            target="_blank"
-            :href="project.liveUrl"
-          >
-            <Icon icon="ph:planet-bold" />
-            <span>Live Demo</span>
-          </a>
+          <!-- Project Info -->
+          <div class="flex-1 p-6 space-y-4">
+            <div>
+              <h3 class="text-2xl font-bold text-textI mb-2 group-hover:text-accent transition-colors">
+                {{ project.name }}
+              </h3>
+              <p class="text-textII text-base leading-relaxed">
+                {{ project.description }}
+              </p>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tag in project.tags"
+                :key="tag"
+                class="px-3 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent border border-accent/20"
+              >
+                {{ tag }}
+              </span>
+            </div>
+
+            <!-- Links -->
+            <div class="flex items-center gap-4 pt-4">
+              <a
+                :href="project.githubUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-accent hover:bg-accent/10 transition-all duration-300 text-sm font-medium text-textI hover:text-accent"
+              >
+                <Icon icon="mdi:github" class="w-5 h-5" />
+                <span>Code</span>
+              </a>
+              <a
+                :href="project.liveUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white hover:bg-accent-hover transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                <Icon icon="mdi:open-in-new" class="w-5 h-5" />
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <a class="absolute bottom-0 right-0 cursor-pointer" href="#contact">
-      <ChevronDoubleDownIcon class="h-8 w-8" />
+    <!-- Scroll indicator -->
+    <a 
+      href="#contact" 
+      class="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-50 hover:opacity-100 transition-opacity"
+    >
+      <ChevronDownIcon class="h-6 w-6 text-textII" />
     </a>
   </section>
 </template>

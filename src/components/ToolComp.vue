@@ -28,6 +28,30 @@ import { Icon } from '@iconify/vue';
             <Icon icon="teenyicons:figma-outline" class="text-[32px]" />
             <span>Figma</span>
         </div>
+        <div class="flex items-center gap-x-2">
+            <Icon icon="mdi:language-php" class="text-[32px]" />
+            <span>PHP</span>
+        </div>
+        <div class="flex items-center gap-x-2">
+            <Icon icon="simple-icons:laravel" class="text-[32px]" />
+            <span>Laravel</span>
+        </div>
+        <div class="flex items-center gap-x-2">
+            <Icon icon="simple-icons:express" class="text-[32px]" />
+            <span>Express</span>
+        </div>
+        <div class="flex items-center gap-x-2">
+            <Icon icon="simple-icons:mongodb" class="text-[32px]" />
+            <span>MongoDB</span>
+        </div>
+        <div class="flex items-center gap-x-2">
+            <Icon icon="mdi:database" class="text-[32px]" />
+            <span>SQL</span>
+        </div>
+        <div class="flex items-center gap-x-2">
+            <Icon icon="simple-icons:postgresql" class="text-[32px]" />
+            <span>PostgreSQL</span>
+        </div>
 
     </div>
 </template>

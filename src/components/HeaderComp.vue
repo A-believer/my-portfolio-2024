@@ -1,5 +1,5 @@
 <script setup>
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { ref } from "vue"
 const toggleMenu = ref(false)
 
@@ -8,52 +8,82 @@ function setToggleMenu(val) {
 }
 </script>
 <template>
-    <header class="flex items-center justify-between text-2xl xl:py-10 md:py-8 py-5 w-full z-40">
-        <h1 class="lg:text-[32px] text-2xl">David Abolade</h1>
-        <nav class="hidden lg:flex">
-            <ul class="flex items-center gap-x-6">
-                <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"><a
-                        href="#about">About</a>
-                </li>
-                <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"><a
-                        href="#tools">Tools</a></li>
-                <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"><a
-                        href="#project">Projects</a></li>
-                <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"><a
-                        href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <nav class="lg:hidden flex z-50">
-            <div>
-                <button v-if="!toggleMenu" @click="setToggleMenu(true)">
-                    <Bars3Icon class="w-8 h-8 hover:text-textII transition-all duration-600" />
-                </button>
-                <button v-else @click="setToggleMenu(false)">
-                    <XMarkIcon class="w-8 h-8 hover:text-textII transition-all duration-600" />
-                </button>
-            </div>
-            <transition enter-from-class="translate-x-5 opacity-0"
-                enter-active-class="transition-all duration-800 ease-out" leave-from-class="translate-x-0 opacity-100"
-                leave-active-class="transition-all duration-800 cubic-bezier(1, 0.5, 0.8, 1)"
-                leave-to-class="translate-x-5 opacity-0">
-                <ul v-if="toggleMenu"
-                    class="bg-bgColor absolute border-y-2 right-0 md:top-[90px] top-[70px] flex flex-col items-center justify-center gap-y-8 p-8 text-right z-50">
-                    <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
-                        <a @click="setToggleMenu(false)" href="#about">About</a>
+    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-bgColor/80 border-b border-border/50">
+        <div class="flex items-center justify-between py-6 w-full">
+            <h1 class="text-2xl lg:text-3xl font-bold">
+                <span class="gradient-text">David Abolade</span>
+            </h1>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex">
+                <ul class="flex items-center gap-x-8">
+                    <li class="relative group">
+                        <a href="#about" class="text-base font-medium text-textII hover:text-textI transition-colors duration-300">
+                            About
+                        </a>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                     </li>
-                    <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
-                        <a @click="setToggleMenu(false)" href="#tools">Tools</a>
+                    <li class="relative group">
+                        <a href="#tools" class="text-base font-medium text-textII hover:text-textI transition-colors duration-300">
+                            Tools
+                        </a>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                     </li>
-                    <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600">
-                        <a @click="setToggleMenu(false)" href="#project">Projects</a>
+                    <li class="relative group">
+                        <a href="#project" class="text-base font-medium text-textII hover:text-textI transition-colors duration-300">
+                            Projects
+                        </a>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                     </li>
-                    <li class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-700">
-                        <a @click="setToggleMenu(false)" href="#contact">Contact</a>
+                    <li>
+                        <a href="#contact" class="px-6 py-2.5 bg-accent text-white rounded-lg font-medium hover:bg-accent-hover transition-all duration-300 shadow-md hover:shadow-lg">
+                            Contact
+                        </a>
                     </li>
                 </ul>
-            </transition>
+            </nav>
 
-        </nav>
+            <!-- Mobile Menu Button -->
+            <nav class="lg:hidden flex z-50">
+                <button @click="setToggleMenu(!toggleMenu)" class="p-2 hover:bg-bg-secondary rounded-lg transition-colors">
+                    <Bars3Icon v-if="!toggleMenu" class="w-7 h-7 text-textI" />
+                    <XMarkIcon v-else class="w-7 h-7 text-textI" />
+                </button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <transition 
+                enter-from-class="opacity-0 translate-x-full"
+                enter-active-class="transition-all duration-300 ease-out" 
+                leave-from-class="opacity-100 translate-x-0"
+                leave-active-class="transition-all duration-300 ease-in"
+                leave-to-class="opacity-0 translate-x-full">
+                <div v-if="toggleMenu"
+                    class="fixed top-[73px] right-0 w-full h-[calc(100vh-73px)] bg-bgColor/95 backdrop-blur-lg border-t border-border lg:hidden z-40">
+                    <ul class="flex flex-col items-center justify-center gap-y-8 h-full p-8">
+                        <li class="w-full text-center">
+                            <a @click="setToggleMenu(false)" href="#about" class="block text-2xl font-semibold text-textI hover:text-accent transition-colors py-3">
+                                About
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a @click="setToggleMenu(false)" href="#tools" class="block text-2xl font-semibold text-textI hover:text-accent transition-colors py-3">
+                                Tools
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a @click="setToggleMenu(false)" href="#project" class="block text-2xl font-semibold text-textI hover:text-accent transition-colors py-3">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a @click="setToggleMenu(false)" href="#contact" class="block px-8 py-4 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover transition-all duration-300 shadow-lg">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </transition>
+        </div>
     </header>
 </template>
