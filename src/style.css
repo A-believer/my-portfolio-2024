@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg: #f8fafc;
+    --textI: #1e293b;
+    --textII: #64748b;
+    --border: #e2e8f0;
+  }
 
-    :root {
-     --bg: #eeeeee;   
-     --textI: #111111;
-     --textII: #666666;
-     --border: #cccccc;
-    }
+  [data-theme="dark"] {
+    --bg: #0f172a;
+    --textI: #f1f5f9;
+    --textII: #94a3b8;
+    --border: #1e293b;
+  }
 
-    [data-theme="dark"] {
-     --bg: #111111;
-     --textI: #eeeeee;
-     --textII: #555555;
-     --border: #333333;
+  html {
+    scroll-behavior: smooth;
+  }
 
-    }
-
-    body{
-        font-family: "Poppins", sans-serif;
-    }
+  body {
+    font-family: "Poppins", sans-serif;
+  }
 }
