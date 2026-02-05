@@ -10,7 +10,7 @@ function setToggleMenu(val) {
 <template>
     <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-bgColor/80 border-b border-border/50">
         <div class="flex items-center justify-between py-6 w-full">
-            <h1 class="text-2xl lg:text-3xl font-bold">
+            <h1 class="text-2xl lg:text-3xl font-bold font-display">
                 <span class="gradient-text">David Abolade</span>
             </h1>
             
@@ -24,14 +24,14 @@ function setToggleMenu(val) {
                         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                     </li>
                     <li class="relative group">
-                        <a href="#tools" class="text-base font-medium text-textII hover:text-textI transition-colors duration-300">
-                            Tools
+                        <a href="#project" class="text-base font-medium text-textII hover:text-textI transition-colors duration-300">
+                            Projects
                         </a>
                         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                     </li>
                     <li class="relative group">
-                        <a href="#project" class="text-base font-medium text-textII hover:text-textI transition-colors duration-300">
-                            Projects
+                        <a href="#tools" class="text-base font-medium text-textII hover:text-textI transition-colors duration-300">
+                            Tools
                         </a>
                         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                     </li>
@@ -67,13 +67,13 @@ function setToggleMenu(val) {
                             </a>
                         </li>
                         <li class="w-full text-center">
-                            <a @click="setToggleMenu(false)" href="#tools" class="block text-2xl font-semibold text-textI hover:text-accent transition-colors py-3">
-                                Tools
+                            <a @click="setToggleMenu(false)" href="#project" class="block text-2xl font-semibold text-textI hover:text-accent transition-colors py-3">
+                                Projects
                             </a>
                         </li>
                         <li class="w-full text-center">
-                            <a @click="setToggleMenu(false)" href="#project" class="block text-2xl font-semibold text-textI hover:text-accent transition-colors py-3">
-                                Projects
+                            <a @click="setToggleMenu(false)" href="#tools" class="block text-2xl font-semibold text-textI hover:text-accent transition-colors py-3">
+                                Tools
                             </a>
                         </li>
                         <li class="w-full text-center">

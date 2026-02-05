@@ -22,8 +22,8 @@ useScrollAnimation()
         <HeaderComp />
         <HeroComp />
         <AboutComp />
-        <ToolsComp />
         <ProjectComp />
+        <ToolsComp />
         <ContactComp />
         <FooterComp />
 

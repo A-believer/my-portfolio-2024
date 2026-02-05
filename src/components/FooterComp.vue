@@ -12,12 +12,12 @@
       <li
         class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"
       >
-        <a href="#tools">Tools</a>
+        <a href="#project">Projects</a>
       </li>
       <li
         class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"
       >
-        <a href="#project">Projects</a>
+        <a href="#tools">Tools</a>
       </li>
       <li
         class="hover:text-textII hover:underline underline-offset-[16px] transition-all duration-600"

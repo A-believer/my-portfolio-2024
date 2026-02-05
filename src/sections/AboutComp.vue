@@ -49,8 +49,8 @@ import {
             </div>
             <div>
               <h3 class="text-2xl font-bold text-textI mb-2">Education</h3>
-              <p class="text-textII text-lg">B.Sc. Bachelor's Degree</p>
-              <p class="text-textIII text-sm mt-2">Strong foundation in computer science</p>
+              <p class="text-textII text-lg">B.Sc. Civil Engineering</p>
+              <p class="text-textIII text-sm mt-2">Analytical Thinking & Problem Solving</p>
             </div>
           </div>
         </div>
@@ -62,14 +62,11 @@ import {
           <p
             class="text-textI/90 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto"
           >
-            I'm David, a passionate frontend web developer with a knack for turning
-            digital dreams into reality. I handle <span class="text-accent font-semibold">technical planning, timelines, QA,
-            and cross-browser optimization</span> to ensure reliable delivery. With a
-            palette of tools ranging from basic HTML, CSS, and Javascript to
-            frameworks and libraries like <span class="text-accent font-semibold">Tailwind, React and Next.js</span>, I craft immersive user experiences that leave a lasting
-            impression. Whether it's responsive layouts that dance across screens or
-            interactive interfaces that spark curiosity, I thrive on pushing the
-            boundaries of web technology.
+            I'm David, a <span class="text-accent font-semibold">Software Engineer</span> with over 3 years of experience transforming complex requirements into production-ready web applications. 
+            My expertise extends beyond the frontend; I build scalable solutions using <span class="text-accent font-semibold">React, Next.js, Vue, Node.js, and Firebase</span>. 
+            I am committed to writing clean, maintainable code and possess strong leadership and communication skills. 
+            Whether optimizing performance, managing application state with <span class="text-accent font-semibold">Redux or Pinia</span>, or integrating backend services, 
+            I focus on utilizing the right technologies to deliver high-quality results efficiently.
           </p>
         </div>
       </div>
