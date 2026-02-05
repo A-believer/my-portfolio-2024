@@ -2,6 +2,7 @@
 import { ref, onMounted } from "vue";
 import GithubComp from "../assets/GithubComp.vue";
 import LinkedInComp from "../assets/LinkedInComp.vue";
+import TwitterComp from "../assets/TwitterComp.vue";
 import { ChevronDownIcon } from "@heroicons/vue/24/outline";
 
 const isVisible = ref(false);
@@ -94,6 +95,14 @@ onMounted(() => {
               aria-label="LinkedIn"
             >
               <LinkedInComp class="w-6 h-6" />
+            </a>
+            <a
+              target="_blank"
+              href="https://x.com/theDavid_AO"
+              class="p-3 rounded-full border border-border text-textII hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300 transform hover:scale-110"
+              aria-label="Twitter/X"
+            >
+              <TwitterComp class="w-6 h-6" />
             </a>
             <a
               target="_blank"

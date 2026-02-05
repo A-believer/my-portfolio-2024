@@ -1,5 +1,7 @@
 <script setup>
 import LinkedInComp from "../assets/LinkedInComp.vue";
+import TwitterComp from "../assets/TwitterComp.vue";
+import GithubComp from "../assets/GithubComp.vue";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
 </script>
 
@@ -64,7 +66,7 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
         class="p-4 rounded-full border border-border hover:border-accent hover:bg-accent/10 transition-all duration-300 group"
         aria-label="LinkedIn"
       >
-        <LinkedInComp height="28" width="28" class="group-hover:scale-110 transition-transform" />
+        <LinkedInComp class="w-7 h-7 group-hover:scale-110 transition-transform" />
       </a>
       <a
         href="https://x.com/theDavid_AO"
@@ -72,9 +74,15 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
         class="p-4 rounded-full border border-border hover:border-accent hover:bg-accent/10 transition-all duration-300 group"
         aria-label="Twitter/X"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" class="group-hover:scale-110 transition-transform">
-          <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-        </svg>
+        <TwitterComp class="w-7 h-7 group-hover:scale-110 transition-transform" />
+      </a>
+      <a
+        href="https://github.com/A-believer"
+        target="_blank"
+        class="p-4 rounded-full border border-border hover:border-accent hover:bg-accent/10 transition-all duration-300 group"
+        aria-label="GitHub"
+      >
+        <GithubComp class="w-7 h-7 group-hover:scale-110 transition-transform" />
       </a>
     </div>
   </section>
