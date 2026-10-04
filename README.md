@@ -1,8 +1,29 @@
-# Vue 3 + Vite
+# David Abolade - Portfolio
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Modern personal portfolio built with Next.js (App Router), React, Tailwind CSS v4, and Heroicons.
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
-# my-portfolio-2024
+- **Next.js App Router**: Optimized performance, metadata, and modern React 19 architecture.
+- **Tailwind CSS v4**: Theme tokens with CSS custom properties and modern aesthetic styling.
+- **Dark / Light Mode**: Seamless theme switching with local storage persistence and zero-flicker hydration.
+- **Interactive Projects Showcase**: Embedded interactive live previews with links to source code and live deployments.
+- **Scroll Animations**: Smooth entrance animations using Intersection Observer.
+- **Responsive Navigation**: Mobile slide-out drawer menu and sticky blur header.
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Build for Production
+
+```bash
+npm run build
+npm run start
+```
