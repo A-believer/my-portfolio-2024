@@ -2,9 +2,9 @@ import "./globals.css";
 import { ThemeProvider } from "../context/ThemeContext";
 
 export const metadata = {
-  title: "David Abolade | Software Engineer",
+  title: "David Abolade — Full-Stack Developer & Software Architect",
   description:
-    "Portfolio of David Abolade, a Software Engineer crafting exceptional digital experiences with modern web technologies.",
+    "Editorial portfolio of David Abolade, a Senior Full-Stack Developer & Software Architect crafting mission-critical platforms, enterprise SaaS, and resilient digital architectures.",
   icons: {
     icon: "/logo.svg",
   },
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
               (function() {
                 try {
                   var stored = localStorage.getItem('theme');
-                  var theme = stored ? stored : 'light';
+                  var theme = stored ? stored : 'dark';
                   document.documentElement.setAttribute('data-theme', theme);
                 } catch (e) {}
               })();

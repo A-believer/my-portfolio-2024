@@ -1,171 +1,150 @@
 "use client";
 
-import {
-  BriefcaseIcon,
-  CalendarIcon,
-  MapPinIcon,
-  ChevronDownIcon,
-} from "@heroicons/react/24/outline";
+import SectionHeaderComp from "../components/SectionHeaderComp";
 
 const experiences = [
   {
+    initials: "MM",
     role: "Front-end Software (Web) Developer",
     company: "Market Master USA",
     location: "Remote, USA",
-    period: "October 2024 – Present",
+    period: "Oct 2024 – Present",
+    scope: "Real-Time Communications, WebRTC Media Processing & SaaS Dashboards",
     highlights: [
       "Architected and deployed 20+ web applications using React, TypeScript, Node.js, and WebSockets across real-time communications, construction tech, healthcare, and financial services.",
-      "Built WebRTC-powered virtual conference platform supporting multi-user video/audio calls, screen sharing, dynamic room routing, and custom FFmpeg media processing.",
+      "Engineered WebRTC-powered virtual conference platform supporting multi-user video/audio calls, screen sharing, dynamic room routing, and custom FFmpeg media processing.",
       "Spearheaded the Zenith Properties software suite, constructing connected Client, Contractor, and Admin dashboards that automated inspection requests and job management workflows.",
       "Engineered automated credit tracking & dispute tools empowering users to monitor financial health across personal and business credit categories.",
-      "Developed HIPAA-mindful patient referral tracking system, improving provider-to-patient intake turnarounds and case oversight.",
-      "Standardized modern UI/UX design systems, building reusable, glassmorphic React component libraries with dark mode support and fluid micro-animations.",
+      "Developed HIPAA-mindful patient referral tracking system, improving provider-to-patient intake turnarounds and clinical case oversight.",
+      "Standardized modern UI/UX design systems, building reusable component libraries with dark mode support and fluid micro-animations.",
     ],
-    skills: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "WebSockets",
-      "WebRTC",
-      "Tailwind CSS",
-      "FFmpeg",
-    ],
+    skills: ["#REACT", "#TYPESCRIPT", "#WEBRTC", "#WEBSOCKETS", "#NODEJS", "#FFMPEG", "#TAILWIND"],
   },
   {
+    initials: "LW",
     role: "Full-Stack Web Developer",
     company: "Labwox",
     location: "Remote, Nigeria",
-    period: "April 2023 – Present",
-    project: "Cerium6 / LabSoft — Enterprise Multi-Tenant LIMS SaaS Platform",
+    period: "Apr 2023 – Present",
+    scope: "Cerium6 / LabSoft — Enterprise Multi-Tenant LIMS SaaS Platform",
     highlights: [
-      "Architected a 3-tier multi-tenant LIMS SaaS using Next.js 14 and Firebase, implementing strict RBAC and secure data isolation.",
-      "Developed an automated PDF generation engine for compliant lab certificates, featuring digital signature integration and dynamic layouts.",
-      "Engineered high-performance analytical dashboards and data grids using TanStack Table, Recharts, and Redux Toolkit.",
-      "Implemented robust forms, schema validation (Zod, React Hook Form), and document parsing pipelines (SheetJS, Mammoth) for seamless data ingestion.",
+      "Architected a 3-tier multi-tenant LIMS SaaS platform using Next.js 14 and Firebase, implementing strict RBAC and data isolation between diagnostic centers.",
+      "Engineered an automated serverless PDF generation engine for compliant laboratory certificates, featuring digital signature verification and dynamic layouts.",
+      "Constructed high-performance analytical dashboards and data grids using TanStack Table, Recharts, and Redux Toolkit handling thousands of concurrent clinical records.",
+      "Implemented robust document parsing pipelines (SheetJS, Mammoth) for automated batch test result ingestion.",
     ],
-    skills: [
-      "Next.js 14",
-      "Firebase",
-      "Redux Toolkit",
-      "TanStack Table",
-      "Recharts",
-      "Zod",
-      "React Hook Form",
-    ],
+    skills: ["#NEXTJS14", "#FIREBASE", "#TANSTACK-TABLE", "#REDUX-TOOLKIT", "#RECHARTS", "#ZOD"],
   },
   {
+    initials: "DL",
     role: "Software Engineer",
     company: "Davies Limited",
     location: "Remote, Nigeria",
-    period: "April 2024 – June 2024",
+    period: "Apr 2024 – Jun 2024",
+    scope: "Internal Enterprise Management System Optimization",
     highlights: [
-      "Refined the management system’s interface using Vue.js to deliver a more intuitive and cohesive user experience.",
-      "Architected backend API integrations to eliminate navigation bottlenecks, resulting in a 15% surge in overall customer engagement metrics.",
+      "Refined the enterprise management system’s interface using Vue.js to deliver a more intuitive, cohesive user experience.",
+      "Architected backend API integrations to eliminate navigation bottlenecks, resulting in a 15% surge in overall user engagement metrics.",
     ],
-    skills: ["Vue.js", "JavaScript", "API Integration", "UI/UX", "State Management"],
+    skills: ["#VUEJS", "#JAVASCRIPT", "#REST-APIS", "#STATE-MANAGEMENT"],
   },
   {
+    initials: "SF",
     role: "Front-end Developer",
     company: "Streams Foundation",
     location: "Remote, Nigeria",
-    period: "December 2023 – March 2024",
+    period: "Dec 2023 – Mar 2024",
+    scope: "Community Empowerment Web Application",
     highlights: [
-      "Translated intricate Figma mockups for landing pages and profile dashboards into high-fidelity, functional code utilizing Next.js.",
-      "Engineered seamless API integrations for real-time data rendering while partnering on iterative design cycles to maximize product accessibility.",
+      "Translated Figma mockups for community portals and profile dashboards into high-fidelity, accessible Next.js applications.",
+      "Engineered seamless API integrations for real-time data rendering while partnering on rapid iterative design cycles.",
     ],
-    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Figma", "REST APIs"],
+    skills: ["#NEXTJS", "#TYPESCRIPT", "#TAILWIND", "#FIGMA"],
   },
   {
+    initials: "HG",
     role: "Front-end Developer (Internship)",
     company: "Hotels NG (Zuri HNGix)",
     location: "Remote, Nigeria",
-    period: "September 2023 – October 2023",
+    period: "Sep 2023 – Oct 2023",
+    scope: "Agile Production Engineering Sprints",
     highlights: [
-      "Developed responsive web apps using React and Tailwind CSS, ensuring high-quality user experience across devices.",
-      "Collaborated with a cross-functional team to resolve key issues in multiple applications under fast-paced agile sprints.",
+      "Developed responsive web applications using React and Tailwind CSS, ensuring cross-browser performance and accessibility.",
+      "Collaborated with cross-functional engineering pods to resolve priority blockers under fast-paced agile development cycles.",
     ],
-    skills: ["React", "Tailwind CSS", "JavaScript", "Agile", "Responsive Design"],
+    skills: ["#REACT", "#TAILWIND", "#JAVASCRIPT", "#AGILE"],
   },
 ];
 
 export default function ExperienceComp() {
   return (
-    <section className="py-32 space-y-16 relative w-full" id="experience">
-      {/* Section Header */}
-      <div className="text-center space-y-4 animate-on-scroll">
-        <p className="text-accent text-sm md:text-base font-semibold tracking-[0.2em] uppercase">
-          Career Journey
-        </p>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textI">
-          Professional Experience
-        </h2>
-      </div>
+    <section className="py-16 sm:py-20 md:py-24 space-y-8 sm:space-y-12 relative w-full border-b border-border" id="experience">
+      {/* Chapter 02 Header */}
+      <SectionHeaderComp
+        chapter="02"
+        title="EXPERIENCE"
+        subtitle="CAREER TRAJECTORY & TECHNICAL LEADERSHIP"
+      />
 
-      <div className="max-w-5xl mx-auto space-y-8 px-4">
+      {/* Experience Timeline Rows */}
+      <div className="space-y-6 sm:space-y-8 max-w-5xl">
         {experiences.map((exp, index) => (
           <div
             key={`${exp.company}-${index}`}
-            className="animate-on-scroll group p-6 md:p-8 rounded-2xl border border-border bg-bg-secondary/30 backdrop-blur-sm hover:border-accent/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+            className="group animate-on-scroll p-4 sm:p-6 md:p-8 rounded border border-border/70 bg-bg-secondary/30 hover:border-border-gold transition-all duration-300 space-y-4"
           >
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 pb-4 border-b border-border/50">
-              <div>
-                <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                    <BriefcaseIcon className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-textI group-hover:text-accent transition-colors">
-                    {exp.role}
-                  </h3>
-                </div>
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-textII mt-2">
-                  <span className="font-semibold text-textI">{exp.company}</span>
-                  <span className="flex items-center gap-1">
-                    <MapPinIcon className="w-4 h-4 text-accent" />
-                    {exp.location}
-                  </span>
-                </div>
+            {/* Header: Avatar Badge & Role Details */}
+            <div className="flex items-start gap-3 sm:gap-5">
+              {/* Monogram Badge */}
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-border group-hover:border-accent bg-bg-secondary flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm">
+                <span className="font-serif font-bold text-xs sm:text-sm md:text-base text-textI group-hover:text-accent transition-colors">
+                  {exp.initials}
+                </span>
               </div>
 
-              <div className="flex items-center gap-1 text-xs md:text-sm font-medium px-3 py-1.5 rounded-full bg-accent/10 text-accent border border-accent/20 w-fit">
-                <CalendarIcon className="w-4 h-4" />
-                <span>{exp.period}</span>
+              {/* Title, Company & Period */}
+              <div className="flex-1 min-w-0 space-y-1">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                  <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-textI group-hover:text-accent transition-colors leading-snug">
+                    {exp.role} <span className="font-light text-textIII hidden sm:inline">–</span>{" "}
+                    <span className="block sm:inline text-textI">{exp.company}</span>
+                  </h3>
+                  <span className="font-mono text-[11px] sm:text-xs text-accent tracking-wider whitespace-nowrap bg-accent/10 px-2 py-0.5 rounded w-fit sm:w-auto">
+                    {exp.period}
+                  </span>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[11px] sm:text-xs text-textIII">
+                  <span>{exp.location}</span>
+                  <span>•</span>
+                  <span className="text-textII font-sans italic">{exp.scope}</span>
+                </div>
               </div>
             </div>
 
-            {exp.project && (
-              <p className="mt-3 text-sm font-medium text-accent">
-                {exp.project}
-              </p>
-            )}
+            {/* Bullet Points with Mobile-Adaptive Left Margin */}
+            <div className="pt-2 space-y-3 sm:pl-16 md:pl-20">
+              <ul className="space-y-2 text-textII text-xs sm:text-sm md:text-base font-light leading-relaxed list-disc list-outside ml-4">
+                {exp.highlights.map((point, pIndex) => (
+                  <li key={pIndex}>{point}</li>
+                ))}
+              </ul>
 
-            <ul className="mt-4 space-y-2 text-textII text-sm md:text-base leading-relaxed list-disc list-outside ml-5">
-              {exp.highlights.map((point, pIndex) => (
-                <li key={pIndex}>{point}</li>
-              ))}
-            </ul>
-
-            <div className="mt-6 flex flex-wrap gap-2 pt-2 border-t border-border/30">
-              {exp.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-2.5 py-1 text-xs font-medium rounded-md bg-bg-secondary text-textII border border-border"
-                >
-                  {skill}
-                </span>
-              ))}
+              {/* Skills Monospace Chips */}
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
+                {exp.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="font-mono text-[10px] sm:text-[11px] text-textIII px-2 py-0.5 rounded bg-bg-secondary border border-border"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Scroll indicator */}
-      <a
-        href="#project"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-50 hover:opacity-100 transition-opacity"
-        aria-label="Scroll to Projects section"
-      >
-        <ChevronDownIcon className="h-6 w-6 text-textII" />
-      </a>
     </section>
   );
 }

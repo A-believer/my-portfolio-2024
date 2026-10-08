@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import GithubComp from "../components/icons/GithubComp";
 import LinkedInComp from "../components/icons/LinkedInComp";
 import TwitterComp from "../components/icons/TwitterComp";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import GithubComp from "../components/icons/GithubComp";
+import { ArrowDownIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export default function HeroComp() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,169 +17,163 @@ export default function HeroComp() {
   }, []);
 
   return (
-    <section className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden py-20 lg:py-0">
-      {/* Ambient Background Lighting */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[50vw] h-[50vw] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-700"></div>
-      </div>
+    <section className="relative min-h-[85vh] sm:min-h-[88vh] flex flex-col justify-center py-12 sm:py-16 md:py-20 border-b border-border overflow-hidden">
+      {/* Editorial Watermark / Subtle Radial Backlight */}
+      <div className="absolute top-1/4 right-[-10%] w-[320px] sm:w-[500px] h-[320px] sm:h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 w-full h-full">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-24">
-          {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left space-y-8 w-full">
-            {/* Eyebrow */}
-            <div
-              className={`transition-all duration-700 ease-out ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-            >
-              <span className="inline-block py-1.5 px-4 rounded-full bg-accent/10 text-accent text-xs md:text-sm font-semibold tracking-wider uppercase border border-accent/20">
-                Frontend-Focused Full-Stack Developer
-              </span>
-            </div>
+      <div className="relative z-10 w-full flex flex-col space-y-8 sm:space-y-10 md:space-y-12">
+        {/* Status / Category Kicker */}
+        <div
+          className={`flex flex-wrap items-center gap-2 sm:gap-3 transition-all duration-700 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <span className="inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-accent bg-accent/10 px-2.5 py-1 rounded border border-border-gold">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+            </span>
+            <span>Available for Full-Stack & Engineering Roles</span>
+          </span>
+          <span className="text-textIII font-mono text-xs hidden sm:inline">•</span>
+          <span className="font-mono text-[11px] sm:text-xs uppercase tracking-wider text-textIII">
+            Lagos, Nigeria // Worldwide Remote
+          </span>
+        </div>
 
-            {/* Main Heading */}
-            <div
-              className={`transition-all duration-700 ease-out delay-100 space-y-2 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-            >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight font-display">
-                <span className="text-textI block">David</span>
-                <span className="gradient-text block">Abolade</span>
-              </h1>
-            </div>
+        {/* Main Editorial Kinetic Headline */}
+        <div
+          className={`space-y-2 sm:space-y-3 transition-all duration-700 ease-out delay-100 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-textI leading-[1.08] break-words">
+            David Abolade <span className="text-accent font-light">–</span>
+            <span className="block italic font-light text-textI/90 mt-1 sm:mt-2">
+              Full-Stack Developer &
+            </span>
+            <span className="block text-accent">
+              Software Architect
+            </span>
+          </h1>
+        </div>
 
-            {/* Description */}
-            <div
-              className={`transition-all duration-700 ease-out delay-200 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-            >
-              <p className="text-textII text-lg md:text-xl lg:text-2xl leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-                Over 3+ years delivering digital solutions for customer-facing platforms,{" "}
-                <span className="text-textI font-medium">FinTech payment integrations</span> (Stripe, Paystack),{" "}
-                secure authentication systems, and scalable enterprise SaaS.
-              </p>
-            </div>
+        {/* Narrative & Metric Columns */}
+        <div
+          className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-end pt-2 transition-all duration-700 ease-out delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          {/* Narrative Paragraph */}
+          <div className="lg:col-span-8 space-y-6">
+            <p className="text-textII text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+              Building scalable, high-performance web applications with over 3+ years of production experience. Specialized in{" "}
+              <strong className="font-medium text-textI">enterprise multi-tenant SaaS</strong>,{" "}
+              <strong className="font-medium text-textI">real-time WebRTC communications</strong>, and{" "}
+              <strong className="font-medium text-textI">FinTech payment architectures</strong> (Stripe, Paystack) engineered for reliability.
+            </p>
 
-            {/* CTA Buttons */}
-            <div
-              className={`flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 transition-all duration-700 ease-out delay-300 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-            >
+            {/* Editorial CTAs */}
+            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-1">
+              <a
+                href="#project"
+                className="group px-6 py-3.5 bg-accent text-bgColor font-mono text-xs uppercase tracking-widest font-semibold rounded hover:bg-accent-hover transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              >
+                <span>View Selected Work</span>
+                <ArrowDownIcon className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
+              </a>
+
               <a
                 href="/David_Abolade_Resume.pdf"
                 download="David_Abolade_Resume.pdf"
-                className="group px-8 py-4 bg-accent text-white rounded-full font-medium text-base hover:bg-accent-hover hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                className="px-6 py-3.5 border border-border hover:border-accent text-textI hover:text-accent font-mono text-xs uppercase tracking-widest rounded transition-all duration-300 flex items-center justify-center gap-2 hover:-translate-y-0.5"
               >
-                Download Resume
+                <span>Download Résumé</span>
+                <ArrowUpRightIcon className="w-3.5 h-3.5" />
               </a>
+
               <a
-                href="#experience"
-                className="group px-8 py-4 bg-textI text-bgColor rounded-full font-medium text-base hover:bg-accent hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                href="#contact"
+                className="px-4 py-3.5 text-textII hover:text-textI font-mono text-xs uppercase tracking-wider transition-colors duration-200 text-center sm:text-left"
               >
-                View Experience
-              </a>
-              <a
-                href="#project"
-                className="group px-8 py-4 border border-border text-textI rounded-full font-medium text-base hover:border-accent hover:text-accent hover:bg-accent/5 transition-all duration-300"
-              >
-                Explore Projects
+                Get In Touch →
               </a>
             </div>
+          </div>
 
-            {/* Social Links */}
-            <div
-              className={`flex items-center justify-center lg:justify-start gap-6 pt-6 transition-all duration-700 ease-out delay-400 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
+          {/* Technical Spec Summary Card */}
+          <div className="lg:col-span-4 p-5 sm:p-6 rounded border border-border bg-bg-secondary/50 backdrop-blur-sm space-y-3">
+            <div className="flex items-center justify-between pb-2 border-b border-border">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-accent">
+                Key Metrics
+              </span>
+              <span className="font-mono text-[10px] text-textIII uppercase">
+                Production Verified
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 text-xs font-mono">
+              <div className="p-2 rounded bg-bg-tertiary/40 border border-border/40">
+                <span className="text-textIII block uppercase text-[10px]">Experience</span>
+                <span className="text-textI font-semibold text-sm">3+ Years</span>
+              </div>
+              <div className="p-2 rounded bg-bg-tertiary/40 border border-border/40">
+                <span className="text-textIII block uppercase text-[10px]">Deployments</span>
+                <span className="text-textI font-semibold text-sm">20+ Production</span>
+              </div>
+              <div className="p-2 rounded bg-bg-tertiary/40 border border-border/40">
+                <span className="text-textIII block uppercase text-[10px]">Primary Stack</span>
+                <span className="text-textI font-semibold text-sm">Next.js / TypeScript</span>
+              </div>
+              <div className="p-2 rounded bg-bg-tertiary/40 border border-border/40">
+                <span className="text-textIII block uppercase text-[10px]">FinTech</span>
+                <span className="text-textI font-semibold text-sm">Stripe & Paystack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Monospace Social Channels Row */}
+        <div
+          className={`flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-hairline font-mono text-xs text-textIII transition-all duration-700 ease-out delay-300 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div className="flex items-center gap-5 sm:gap-6">
+            <a
+              href="https://github.com/A-believer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors flex items-center gap-1.5"
             >
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/thedavid-ao"
-                className="p-3 rounded-full border border-border text-textII hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300 transform hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <LinkedInComp className="w-6 h-6" />
-              </a>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://x.com/theDavid_AO"
-                className="p-3 rounded-full border border-border text-textII hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300 transform hover:scale-110"
-                aria-label="Twitter/X"
-              >
-                <TwitterComp className="w-6 h-6" />
-              </a>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/A-believer"
-                className="p-3 rounded-full border border-border text-textII hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300 transform hover:scale-110"
-                aria-label="GitHub"
-              >
-                <GithubComp className="w-6 h-6" />
-              </a>
-            </div>
+              <GithubComp className="w-4 h-4" />
+              <span>GITHUB</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/thedavid-ao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors flex items-center gap-1.5"
+            >
+              <LinkedInComp className="w-4 h-4" />
+              <span>LINKEDIN</span>
+            </a>
+            <a
+              href="https://x.com/theDavid_AO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors flex items-center gap-1.5"
+            >
+              <TwitterComp className="w-4 h-4" />
+              <span>X // TWITTER</span>
+            </a>
           </div>
 
-          {/* Hero Image */}
-          <div
-            className={`flex-1 flex justify-center lg:justify-end transition-all duration-1000 ease-out delay-300 ${
-              isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-            }`}
-          >
-            <div className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
-              {/* Animated Blob Background */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-accent to-purple-500 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] blur-[60px] opacity-40 animate-[spin_10s_linear_infinite]"></div>
-
-              {/* Image Container */}
-              <div className="relative w-full h-full overflow-hidden border-[8px] border-bg-secondary/50 shadow-2xl rounded-[40%_60%_70%_30%/40%_50%_60%_50%] hover:rounded-[50%_50%_50%_50%] transition-all duration-700 ease-in-out">
-                <img
-                  src="/assets/david.jpg"
-                  alt="David Abolade"
-                  className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-700 ease-in-out"
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-bgColor/40 to-transparent"></div>
-              </div>
-
-              {/* Floating Badge */}
-              <div className="absolute bottom-10 -left-6 bg-bgColor/80 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl animate-[bounce_3s_infinite] hidden md:block">
-                <span className="text-4xl">👨‍💻</span>
-              </div>
-            </div>
-          </div>
+          <span className="text-[11px] tracking-wider uppercase text-textIII/80">
+            SYSTEM ARCHITECTURE & PRODUCTION ENGINEERING
+          </span>
         </div>
       </div>
-
-      {/* Scroll Down Indicator */}
-      <a
-        href="#about"
-        className={`absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer z-20 group ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
-        aria-label="Scroll to About section"
-      >
-        <div className="p-2 rounded-full border border-textII/20 bg-bg-secondary/50 backdrop-blur-sm group-hover:border-accent group-hover:text-accent transition-colors">
-          <ChevronDownIcon className="h-6 w-6 text-textII group-hover:text-accent" />
-        </div>
-      </a>
     </section>
   );
 }

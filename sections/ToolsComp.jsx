@@ -1,74 +1,79 @@
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+"use client";
+
+import SectionHeaderComp from "../components/SectionHeaderComp";
 import LanguageComp from "../components/LanguageComp";
 import ToolComp from "../components/ToolComp";
 
+const competencies = [
+  "Multi-Tenant SaaS Architecture",
+  "FinTech Gateways (Stripe & Paystack)",
+  "Real-Time WebSockets & WebRTC Media",
+  "Automated PDF Generation & Signatures",
+  "Strict RBAC & Tenant Data Isolation",
+  "TanStack Table & Recharts Dashboards",
+  "Batch Document Ingestion (SheetJS / Mammoth)",
+  "Runtime Schema Validation (Zod / Hook Form)",
+  "HIPAA & Financial Privacy Compliance",
+  "Agile & Cross-Functional Engineering Sprints",
+];
+
 export default function ToolsComp() {
   return (
-    <section className="py-32 space-y-16 relative w-full" id="tools">
-      {/* Section Header */}
-      <div className="text-center space-y-4 animate-on-scroll">
-        <p className="text-accent text-sm md:text-base font-semibold tracking-[0.2em] uppercase">
-          Technical Expertise
-        </p>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textI">
-          Tools & Technologies
-        </h2>
-      </div>
+    <section className="py-16 sm:py-20 md:py-24 space-y-12 sm:space-y-16 relative w-full border-b border-border" id="tools">
+      {/* Chapter 04 Header */}
+      <SectionHeaderComp
+        chapter="04"
+        title="TECHNICAL ARSENAL"
+        subtitle="LANGUAGES, RUNTIMES, INFRASTRUCTURE & PERSISTENCE"
+      />
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-4">
-        <div className="animate-on-scroll p-8 md:p-10 rounded-2xl border border-border bg-bg-secondary/30 backdrop-blur-sm hover:border-accent/50 transition-all duration-500 hover:shadow-xl">
-          <h3 className="text-2xl md:text-3xl font-bold text-textI mb-8 text-center">
-            Languages & Frameworks
-          </h3>
+      {/* 2-Column Domain Grid: 1 col on mobile/tablet, 2 cols on lg */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        {/* Domain 01: Languages & Frameworks */}
+        <div className="space-y-4 sm:space-y-6 animate-on-scroll">
+          <div className="flex items-baseline justify-between border-b border-border pb-3">
+            <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-textI">
+              Languages & Core Frameworks
+            </h3>
+            <span className="font-mono text-xs text-accent">DOMAIN // 01</span>
+          </div>
           <LanguageComp />
         </div>
 
-        <div className="animate-on-scroll p-8 md:p-10 rounded-2xl border border-border bg-bg-secondary/30 backdrop-blur-sm hover:border-accent/50 transition-all duration-500 hover:shadow-xl">
-          <h3 className="text-2xl md:text-3xl font-bold text-textI mb-8 text-center">
-            Libraries, Cloud & Tools
-          </h3>
+        {/* Domain 02: Libraries & Infrastructure */}
+        <div className="space-y-4 sm:space-y-6 animate-on-scroll">
+          <div className="flex items-baseline justify-between border-b border-border pb-3">
+            <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-textI">
+              Libraries, Cloud & Protocols
+            </h3>
+            <span className="font-mono text-xs text-accent">DOMAIN // 02</span>
+          </div>
           <ToolComp />
         </div>
       </div>
 
-      {/* Competencies Badges */}
-      <div className="max-w-5xl mx-auto px-4 animate-on-scroll">
-        <div className="p-6 md:p-8 rounded-2xl border border-border bg-bg-secondary/20 backdrop-blur-sm">
-          <h4 className="text-lg font-bold text-textI text-center mb-6">
-            Core Specialized Competencies
+      {/* Domain 03: Specialized Architectural Competencies */}
+      <div className="pt-6 sm:pt-8 border-t border-hairline space-y-4 sm:space-y-6 animate-on-scroll">
+        <div className="flex items-baseline justify-between">
+          <h4 className="font-mono text-xs uppercase tracking-widest text-accent">
+            Domain 03 // Specialized Production Capabilities
           </h4>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "Multi-Tenant SaaS Architecture",
-              "Payment Processing (Stripe & Paystack)",
-              "Strict RBAC & Data Isolation",
-              "Automated PDF Generation & Signatures",
-              "WebRTC Video & Real-Time WebSockets",
-              "TanStack Table & Recharts Dashboards",
-              "Document Parsing (SheetJS & Mammoth)",
-              "Schema Validation (Zod & Hook Form)",
-              "High Performance & SEO Optimization",
-              "Agile & Scrum Sprints",
-            ].map((badge) => (
-              <span
-                key={badge}
-                className="px-4 py-2 rounded-full text-xs md:text-sm font-medium bg-accent/10 text-accent border border-accent/20 hover:bg-accent hover:text-white transition-all duration-300"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
+          <span className="font-mono text-[10px] text-textIII uppercase hidden sm:inline">
+            Production Tested
+          </span>
+        </div>
+
+        <div className="flex flex-wrap gap-2 sm:gap-2.5">
+          {competencies.map((comp) => (
+            <span
+              key={comp}
+              className="px-3 sm:px-3.5 py-1.5 rounded font-mono text-[11px] sm:text-xs text-textI bg-bg-secondary border border-border hover:border-border-gold transition-colors duration-200"
+            >
+              • {comp}
+            </span>
+          ))}
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <a
-        href="#contact"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-50 hover:opacity-100 transition-opacity"
-        aria-label="Scroll to Contact section"
-      >
-        <ChevronDownIcon className="h-6 w-6 text-textII" />
-      </a>
     </section>
   );
 }

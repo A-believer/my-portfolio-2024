@@ -115,10 +115,10 @@ const options = [
 ];
 
 export default function DesignOptionsPage() {
-  const [selectedId, setSelectedId] = useState(1);
+  const [selectedId, setSelectedId] = useState(3);
   const [modalImage, setModalImage] = useState(null);
 
-  const currentOption = options.find((o) => o.id === selectedId) || options[0];
+  const currentOption = options.find((o) => o.id === selectedId) || options[2];
 
   return (
     <div className="min-h-screen bg-[#07090E] text-slate-100 font-sans p-6 md:p-12">
@@ -134,7 +134,7 @@ export default function DesignOptionsPage() {
               <span>Back to Current Portfolio</span>
             </Link>
             <div className="flex items-center gap-3">
-              <span className="p-2 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+              <span className="p-2 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
                 <SparklesIcon className="w-6 h-6" />
               </span>
               <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -142,8 +142,7 @@ export default function DesignOptionsPage() {
               </h1>
             </div>
             <p className="text-slate-400 text-base md:text-lg mt-2 max-w-3xl">
-              Curated from trending award-winning portfolios on Dribbble, Pinterest, and Awwwards.
-              Select any option below to view its visual snapshot, color palette, and layout architecture.
+              Option 3 (<span className="text-amber-400 font-semibold">Editorial Minimalist & Bold Kinetic Typography</span>) is actively implemented across the entire application.
             </p>
           </div>
         </div>
@@ -156,16 +155,19 @@ export default function DesignOptionsPage() {
               onClick={() => setSelectedId(opt.id)}
               className={`p-4 rounded-xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                 selectedId === opt.id
-                  ? "bg-indigo-600/20 border-indigo-500 text-white shadow-lg shadow-indigo-500/10 scale-102"
+                  ? "bg-amber-600/20 border-amber-500 text-white shadow-lg shadow-amber-500/10 scale-102"
                   : "bg-white/[0.03] border-white/10 text-slate-400 hover:bg-white/[0.06] hover:text-white"
               }`}
             >
               <div className="flex items-center justify-between w-full mb-2">
-                <span className="text-xs font-mono px-2 py-0.5 rounded bg-white/10 text-slate-300">
-                  Option {opt.id}
+                <span className="text-xs font-mono px-2 py-0.5 rounded bg-white/10 text-slate-300 flex items-center gap-1">
+                  <span>Option {opt.id}</span>
+                  {opt.id === 3 && (
+                    <span className="text-[10px] text-amber-400 font-bold">• ACTIVE</span>
+                  )}
                 </span>
                 {selectedId === opt.id && (
-                  <CheckCircleIcon className="w-5 h-5 text-indigo-400" />
+                  <CheckCircleIcon className="w-5 h-5 text-amber-400" />
                 )}
               </div>
               <p className="font-semibold text-sm line-clamp-2">{opt.title}</p>

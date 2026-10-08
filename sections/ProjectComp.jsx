@@ -1,24 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { Icon } from "@iconify/react";
+import SectionHeaderComp from "../components/SectionHeaderComp";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import GithubComp from "../components/icons/GithubComp";
 
 const projects = [
   {
     id: "cerium6",
-    name: "Cerium6 / LabSoft (Labwox)",
+    index: "01",
+    name: "Cerium6 // Enterprise LIMS SaaS",
+    subtitle: "Multi-Tenant Laboratory Information Management System",
     category: "Enterprise SaaS",
     description:
-      "Enterprise Multi-Tenant LIMS SaaS platform with strict RBAC, automated PDF lab certificate generation, digital signature integration, and high-performance data grids.",
-    tags: [
-      "Next.js 14",
-      "Firebase",
-      "TanStack Table",
-      "Recharts",
-      "Redux Toolkit",
-      "Zod",
-    ],
+      "Engineered multi-tenant laboratory SaaS architecture featuring tenant data isolation, role-based access control (RBAC), automated certificate PDF generation with digital signature verification, and high-density analytical data grids.",
+    tags: ["#NEXTJS14", "#FIREBASE", "#TANSTACK-TABLE", "#RECHARTS", "#ZOD", "#REDUX"],
     githubUrl: "https://github.com/A-believer/Labwox",
     liveUrl: "https://labsoft-report-app.vercel.app/",
     image: "/assets/labwox.png",
@@ -26,18 +22,13 @@ const projects = [
   },
   {
     id: "mmos",
-    name: "Market Master USA (MMOS)",
+    index: "02",
+    name: "Market Master USA // MMOS Suite",
+    subtitle: "WebRTC Virtual Conferencing & Operations Platform",
     category: "Full-Stack",
     description:
-      "Real-time business management & communications suite with WebRTC video/audio conferencing, screen sharing, credit tracking, and automated inspection workflows.",
-    tags: [
-      "React",
-      "TypeScript",
-      "WebSockets",
-      "WebRTC",
-      "Node.js",
-      "Tailwind CSS",
-    ],
+      "Enterprise operations suite featuring multi-user WebRTC audio/video conferencing, real-time screen sharing, dynamic room routing, automated FFmpeg media transcoding, and business credit tracking dashboards.",
+    tags: ["#REACT", "#TYPESCRIPT", "#WEBRTC", "#WEBSOCKETS", "#NODEJS", "#TAILWIND"],
     githubUrl: "https://github.com/A-believer/mmos",
     liveUrl: "https://marketmasterusa.com",
     image: "/assets/shopping-cart.png",
@@ -45,70 +36,55 @@ const projects = [
   },
   {
     id: "google-drive-clone",
-    name: "CloudVault (Google Drive Clone)",
+    index: "03",
+    name: "CloudVault // Cloud Storage Engine",
+    subtitle: "Real-Time Cloud Storage & Document Sync System",
     category: "Full-Stack",
     description:
-      "Full-stack cloud file storage platform with real-time synchronization, nested folder management, Clerk authentication, and Convex reactive database.",
-    tags: [
-      "Next.js 15",
-      "TypeScript",
-      "Convex",
-      "Clerk Auth",
-      "Tailwind CSS",
-      "Radix UI",
-    ],
+      "Full-stack cloud file vault built with reactive database queries, tree-structured folder hierarchies, multi-file uploads, Clerk authentication, and real-time state synchronization.",
+    tags: ["#NEXTJS15", "#TYPESCRIPT", "#CONVEX-DB", "#CLERK-AUTH", "#RADIX-UI"],
     githubUrl: "https://github.com/A-believer/google-drive-clone",
     liveUrl: "https://github.com/A-believer/google-drive-clone",
+    image: "/assets/dashboard.png",
+    featured: true,
+  },
+  {
+    id: "geegpay-dashboard",
+    index: "04",
+    name: "Geegpay // FinTech Analytics Dashboard",
+    subtitle: "Multi-Currency Financial Metrics & Transaction Engine",
+    category: "FinTech",
+    description:
+      "Interactive financial analytics dashboard featuring live currency exchange metrics, automated payout workflows, interactive cashflow charts, and high-security transaction monitoring.",
+    tags: ["#REACT", "#TYPESCRIPT", "#CHARTJS", "#FINTECH", "#TAILWIND"],
+    githubUrl: "https://github.com/A-believer/geegpay-dashboard",
+    liveUrl: "https://geegpay-dashboard-sigma.vercel.app/",
+    image: "/assets/dashboard.png",
     featured: true,
   },
   {
     id: "s-e-mind-reset",
-    name: "S-E Mind Reset Center",
+    index: "05",
+    name: "S-E Mind Reset // HealthTech Platform",
+    subtitle: "Clinical Wellness & Patient Intake Architecture",
     category: "HealthTech",
     description:
-      "Mental health and clinical wellness platform featuring structured onboarding flows, client intake forms, and state management via Redux Toolkit and TanStack Query.",
-    tags: [
-      "Next.js 15",
-      "React 19",
-      "Redux Toolkit",
-      "TanStack Query",
-      "Zod",
-      "Radix UI",
-    ],
+      "Clinical wellness platform featuring structured psychiatric onboarding flows, validated client intake pipelines, and state management via Redux Toolkit and TanStack Query with HIPAA data protection principles.",
+    tags: ["#NEXTJS15", "#REACT19", "#TANSTACK-QUERY", "#REDUX-TOOLKIT", "#ZOD"],
     githubUrl: "https://github.com/A-believer/s-e-mind-reset-center",
     liveUrl: "https://s-e-mind-reset-center.vercel.app",
-    featured: true,
-  },
-  {
-    id: "streams-foundation",
-    name: "Streams Foundation Web App",
-    category: "Frontend",
-    description:
-      "Community and empowerment organization platform translating complex Figma design systems into high-performance, accessible Next.js web applications.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Figma", "REST APIs"],
-    githubUrl: "https://github.com/A-believer/stream-web-app",
-    liveUrl: "https://stream-web-app-one.vercel.app",
-    featured: false,
-  },
-  {
-    id: "geegpay-dashboard",
-    name: "Geegpay FinTech Dashboard",
-    category: "FinTech",
-    description:
-      "FinTech analytics dashboard featuring interactive multi-currency financial metrics, real-time charts, and automated transaction monitoring.",
-    tags: ["React", "TypeScript", "Chart.js", "Tailwind CSS", "FinTech"],
-    githubUrl: "https://github.com/A-believer/geegpay-dashboard",
-    liveUrl: "https://geegpay-dashboard-sigma.vercel.app/",
-    image: "/assets/dashboard.png",
+    image: "/assets/teachmate-todo.png",
     featured: false,
   },
   {
     id: "teachmate-todo",
-    name: "TeachMate Todo AI",
+    index: "06",
+    name: "TeachMate Todo // Educational Task Manager",
+    subtitle: "Curriculum Planning & Priority Matrix for Educators",
     category: "Web App",
     description:
-      "AI-assisted task management application for educators to structure curricula, organize classroom priorities, and track daily teaching goals.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Productivity"],
+      "Task management application designed for educators to structure curricula, organize classroom priorities, and track daily teaching milestones with zero latency.",
+    tags: ["#REACT", "#TYPESCRIPT", "#PRODUCTIVITY", "#LOCALSTORAGE"],
     githubUrl: "https://github.com/A-believer/teachmateai-task-manager",
     liveUrl: "https://teachmateai-task-manager.vercel.app/",
     image: "/assets/teachmate-todo.png",
@@ -116,182 +92,186 @@ const projects = [
   },
   {
     id: "getlinked-ai",
-    name: "GetLinked AI Platform",
+    index: "07",
+    name: "GetLinked // Hackathon Platform",
+    subtitle: "Event Registration & Countdown Architecture",
     category: "Frontend",
     description:
-      "Tech hackathon registration platform designed with fluid glassmorphic UI, responsive layouts, countdown systems, and modern micro-animations.",
-    tags: ["React", "Framer Motion", "Tailwind CSS", "UI/UX"],
+      "Hackathon portal with responsive layouts, fluid glassmorphic UI, real-time registration counters, and interactive schedule timeline components.",
+    tags: ["#REACT", "#FRAMER-MOTION", "#TAILWIND", "#UI-UX"],
     githubUrl: "https://github.com/A-believer/get-linked",
     liveUrl: "https://get-linked-ai.vercel.app/",
     image: "/assets/getLinked.png",
     featured: false,
   },
   {
-    id: "klord-tech",
-    name: "Klord Technologies",
-    category: "Web App",
+    id: "streams-foundation",
+    index: "08",
+    name: "Streams Foundation // Non-Profit Portal",
+    subtitle: "Community Portal & Program Engagement",
+    category: "Frontend",
     description:
-      "Corporate technology services and digital consulting platform built with modern responsive architecture and fast asset delivery.",
-    tags: ["React", "Tailwind CSS", "Vite", "JavaScript"],
-    githubUrl: "https://github.com/A-believer/klord-technologies",
-    liveUrl: "https://klord-technologies.vercel.app",
+      "Translated Figma design systems into accessible, performant Next.js applications with optimized asset loading, accessible forms, and localized content delivery.",
+    tags: ["#NEXTJS", "#TYPESCRIPT", "#FIGMA", "#REST-APIS"],
+    githubUrl: "https://github.com/A-believer/stream-web-app",
+    liveUrl: "https://stream-web-app-one.vercel.app",
+    image: "/assets/labwox.png",
     featured: false,
   },
   {
     id: "dudurewa",
-    name: "Dudurewa",
+    index: "09",
+    name: "Dudurewa // Culinary Commerce System",
+    subtitle: "Online Ordering & Kitchen Dispatch Architecture",
     category: "Web App",
     description:
-      "Modern restaurant website with online ordering system, interactive menu navigation, and integrated backend ordering workflows.",
-    tags: ["Next.js", "Tailwind CSS", "Laravel", "PHP"],
+      "Food ordering web application with dynamic cart calculations, custom checkout workflows, and fast server-side menu rendering.",
+    tags: ["#NEXTJS", "#TAILWIND", "#PHP", "#ECOMMERCE"],
     githubUrl: "https://github.com/A-believer",
     liveUrl: "https://dudurewas-kitchen.vercel.app/",
+    image: "/assets/shopping-cart.png",
     featured: false,
   },
 ];
 
-const categories = ["All", "Enterprise SaaS", "Full-Stack", "FinTech", "Frontend", "Web App"];
+const categories = ["ALL", "ENTERPRISE SAAS", "FULL-STACK", "FINTECH", "HEALTHTECH", "FRONTEND"];
 
 export default function ProjectComp() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("ALL");
 
   const filteredProjects =
-    activeCategory === "All"
+    activeCategory === "ALL"
       ? projects
-      : projects.filter(
-          (p) =>
-            p.category === activeCategory ||
-            (activeCategory === "Full-Stack" &&
-              (p.category === "Full-Stack" || p.category === "Enterprise SaaS" || p.category === "HealthTech")) ||
-            (activeCategory === "Web App" &&
-              (p.category === "Web App" || p.category === "HealthTech"))
-        );
+      : projects.filter((p) => {
+          if (activeCategory === "ENTERPRISE SAAS") return p.category === "Enterprise SaaS";
+          if (activeCategory === "FULL-STACK") return p.category === "Full-Stack" || p.category === "Enterprise SaaS";
+          if (activeCategory === "FINTECH") return p.category === "FinTech";
+          if (activeCategory === "HEALTHTECH") return p.category === "HealthTech";
+          if (activeCategory === "FRONTEND") return p.category === "Frontend" || p.category === "Web App";
+          return true;
+        });
 
   return (
-    <section className="py-32 space-y-16 relative w-full" id="project">
-      {/* Section Header */}
-      <div className="text-center space-y-4 animate-on-scroll">
-        <p className="text-accent text-sm md:text-base font-semibold tracking-[0.2em] uppercase">
-          Featured Engineering Work
-        </p>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textI">
-          Projects & Platforms
-        </h2>
+    <section className="py-16 sm:py-20 md:py-24 space-y-8 sm:space-y-12 relative w-full border-b border-border" id="project">
+      {/* Chapter 01 Header */}
+      <SectionHeaderComp
+        chapter="01"
+        title="SELECTED WORK"
+        subtitle="PRODUCTION CASE STUDIES & APPLICATIONS"
+      />
+
+      {/* Horizontally scrollable category filter for mobile and tablet */}
+      <div className="w-full overflow-x-auto no-scrollbar py-1">
+        <div className="flex items-center gap-2 min-w-max">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-3 sm:px-4 py-1.5 rounded text-[11px] sm:text-xs font-mono tracking-wider transition-all duration-200 cursor-pointer ${
+                activeCategory === category
+                  ? "bg-accent text-bgColor font-semibold shadow-sm"
+                  : "border border-border text-textII hover:text-textI hover:border-accent"
+              }`}
+            >
+              [ {category} ]
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Category Filter Pills */}
-      <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto px-4 animate-on-scroll">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
-              activeCategory === category
-                ? "bg-accent text-white shadow-md scale-105"
-                : "bg-bg-secondary/60 text-textII hover:text-textI hover:bg-bg-secondary border border-border"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
-      {/* Projects Grid */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4">
+      {/* Responsive Grid: 1 col on mobile, 2 cols on tablet, 3 cols on xl desktop */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="group animate-on-scroll flex">
-            <div className="w-full flex flex-col rounded-2xl border border-border bg-bg-secondary/30 backdrop-blur-sm overflow-hidden hover:border-accent/50 transition-all duration-500 hover:shadow-2xl">
-              {/* Project Preview (iframe or image) */}
-              <div className="relative w-full h-64 bg-border/20 overflow-hidden">
+          <div
+            key={project.id}
+            className="group animate-on-scroll flex flex-col justify-between rounded border border-border bg-bg-secondary/50 backdrop-blur-sm overflow-hidden hover:border-border-gold transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
+            <div>
+              {/* Thumbnail with Signature Champagne Gold Bottom Accent */}
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-black/60 border-b-2 border-accent">
                 {project.image ? (
-                  <div className="relative w-full h-full">
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary/90 via-transparent to-transparent opacity-60"></div>
-                  </div>
-                ) : (
-                  <iframe
-                    src={project.liveUrl}
-                    title={project.name}
-                    className="w-full h-full scale-50 origin-top-left pointer-events-none"
-                    style={{ width: "200%", height: "200%" }}
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover object-top filter grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                     loading="lazy"
-                    sandbox="allow-scripts allow-same-origin"
-                  ></iframe>
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-bg-secondary text-textIII font-mono text-xs">
+                    PROJECT PREVIEW
+                  </div>
                 )}
 
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-bgColor/90 text-accent border border-accent/20 backdrop-blur-md">
+                <div className="absolute top-3 left-3 flex items-center gap-2">
+                  <span className="font-mono text-[10px] tracking-wider uppercase px-2 py-0.5 rounded bg-black/80 text-accent border border-border-gold backdrop-blur-md">
                     {project.category}
+                  </span>
+                </div>
+
+                <div className="absolute top-3 right-3">
+                  <span className="font-mono text-[10px] text-textI/80 bg-black/70 px-2 py-0.5 rounded font-medium">
+                    {project.index}
                   </span>
                 </div>
               </div>
 
-              {/* Project Info */}
-              <div className="flex-1 p-6 md:p-8 flex flex-col justify-between space-y-4">
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-textI group-hover:text-accent transition-colors">
+              {/* Card Meta & Summary */}
+              <div className="p-5 sm:p-6 space-y-2.5">
+                <div className="space-y-1">
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-textI group-hover:text-accent transition-colors leading-snug">
                     {project.name}
                   </h3>
-                  <p className="text-textII text-sm md:text-base leading-relaxed">
-                    {project.description}
+                  <p className="font-mono text-xs text-accent/90 tracking-wide line-clamp-1">
+                    {project.subtitle}
                   </p>
                 </div>
 
-                <div className="space-y-4 pt-2">
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent border border-accent/20"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <p className="text-textII text-xs sm:text-sm leading-relaxed font-light line-clamp-3 sm:line-clamp-4">
+                  {project.description}
+                </p>
+              </div>
+            </div>
 
-                  {/* Links */}
-                  <div className="flex items-center gap-4 pt-2 border-t border-border/40">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-accent hover:bg-accent/10 transition-all duration-300 text-sm font-medium text-textI hover:text-accent"
-                    >
-                      <Icon icon="mdi:github" className="w-5 h-5" />
-                      <span>Source Code</span>
-                    </a>
-                    {project.liveUrl && project.liveUrl !== project.githubUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white hover:bg-accent-hover transition-all duration-300 text-sm font-medium shadow-md hover:shadow-lg hover:scale-105"
-                      >
-                        <Icon icon="mdi:open-in-new" className="w-5 h-5" />
-                        <span>Live Demo</span>
-                      </a>
-                    )}
-                  </div>
-                </div>
+            {/* Tags & Action Links */}
+            <div className="p-5 sm:p-6 pt-0 space-y-4">
+              <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border/50">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-mono text-[10px] text-textIII tracking-wider"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between pt-3 border-t border-hairline font-mono text-xs">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-textII hover:text-accent transition-colors py-1"
+                >
+                  <GithubComp className="w-4 h-4" />
+                  <span>SOURCE</span>
+                </a>
+
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-accent hover:text-accent-hover transition-colors font-semibold py-1"
+                  >
+                    <span>LIVE DEMO</span>
+                    <ArrowUpRightIcon className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Scroll indicator */}
-      <a
-        href="#tools"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-50 hover:opacity-100 transition-opacity"
-        aria-label="Scroll to Tools section"
-      >
-        <ChevronDownIcon className="h-6 w-6 text-textII" />
-      </a>
     </section>
   );
 }
