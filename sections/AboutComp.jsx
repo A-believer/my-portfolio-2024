@@ -1,7 +1,7 @@
 "use client";
 
 import SectionHeaderComp from "../components/SectionHeaderComp";
-import { CheckIcon } from "@heroicons/react/24/outline";
+import { CheckIcon, SparklesIcon } from "@heroicons/react/24/outline";
 
 export default function AboutComp() {
   return (
@@ -9,14 +9,14 @@ export default function AboutComp() {
       {/* Chapter 03 Header */}
       <SectionHeaderComp
         chapter="03"
-        title="ABOUT & PHILOSOPHY"
-        subtitle="ENGINEERING ETHOS, BACKGROUND & METHODOLOGY"
+        title="ABOUT & APPROACH"
+        subtitle="PRODUCT MINDSET, VELOCITY & ENGINEERING VALUES"
       />
 
       {/* Editorial Pull Quote */}
       <div className="animate-on-scroll max-w-4xl border-l-2 border-accent pl-4 sm:pl-6 md:pl-8 py-2">
         <blockquote className="font-serif italic text-xl sm:text-2xl md:text-3xl lg:text-4xl text-textI font-normal leading-snug">
-          “Software engineering is the craft of building resilient, scalable systems that solve complex problems and quietly empower everyday lives.”
+          “I turn product roadmaps into resilient, revenue-generating software—pairing solid full-stack engineering with AI-accelerated delivery.”
         </blockquote>
       </div>
 
@@ -26,31 +26,35 @@ export default function AboutComp() {
         <div className="lg:col-span-7 space-y-6 sm:space-y-8 animate-on-scroll order-2 lg:order-1">
           <div className="space-y-4 sm:space-y-5 text-textII text-sm sm:text-base md:text-lg leading-relaxed font-light">
             <p>
-              I am <strong className="text-textI font-medium">David Abolade</strong>, a Full-Stack Software Developer and Systems Architect with 3+ years of experience delivering high-scale web platforms, distributed applications, and secure transaction systems.
+              I am <strong className="text-textI font-medium">David Abolade</strong>, a product-minded Full-Stack Software Developer with over 3+ years of experience delivering high-velocity web platforms, enterprise SaaS, and mission-critical payment workflows.
             </p>
             <p>
-              My expertise covers modern frontend architecture (<strong className="text-textI font-medium">React, Next.js, TypeScript, Vue</strong>) and backend runtime services (<strong className="text-textI font-medium">Node.js, Firebase, PostgreSQL, WebSockets</strong>). In financial engineering, I specialize in building reliable, fault-tolerant payment flows with <strong className="text-accent font-medium">Stripe and Paystack</strong>, implementing idempotent webhook handlers, automated reconciliation, and strict access controls.
+              My sweet spot is bridging business goals and technical execution across the entire stack—from high-performance frontend interfaces (<strong className="text-textI font-medium">React, Next.js, TypeScript</strong>) down through backend services (<strong className="text-textI font-medium">Node.js, Firebase, PostgreSQL, WebSockets</strong>) and compliant payment gateways (<strong className="text-accent font-medium">Stripe & Paystack</strong>).
             </p>
-            <p>
-              Whether engineering an enterprise LIMS platform for diagnostic laboratories or deploying real-time WebRTC audio/video systems with FFmpeg media processing, I build clean, maintainable systems designed to scale smoothly under heavy production loads.
+            <p className="p-4 rounded border border-border-gold/40 bg-accent/5 text-textI">
+              <span className="font-mono text-xs text-accent font-semibold flex items-center gap-1.5 mb-1 uppercase tracking-wider">
+                <SparklesIcon className="w-4 h-4" />
+                <span>AI in My Workflow</span>
+              </span>
+              I actively integrate modern AI tools into my daily engineering cycle—leveraging LLM copilots (Cursor, Claude Code) and AI APIs (OpenAI, Gemini) for rapid architectural scaffolding, automated test generation, and intelligent features. This enables me to ship production-ready features <strong className="text-accent">2-3x faster</strong> without cutting corners on maintainability.
             </p>
           </div>
 
           {/* Architectural Pillars */}
           <div className="space-y-4 pt-4 sm:pt-6 border-t border-border">
             <h3 className="font-mono text-xs uppercase tracking-widest text-accent">
-              Core Engineering Focus
+              What I Bring to Your Team
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div className="p-4 rounded border border-border bg-bg-secondary/40 space-y-1.5 hover:border-border-gold transition-colors">
                 <div className="flex items-center gap-2">
                   <CheckIcon className="w-4 h-4 text-accent shrink-0" />
                   <h4 className="font-serif font-bold text-sm text-textI">
-                    Multi-Tenant Isolation
+                    0-to-1 Product Execution
                   </h4>
                 </div>
                 <p className="text-xs text-textII font-light leading-relaxed">
-                  Strict cryptographic separation, tenant routing, and granular RBAC.
+                  Fast translation of wireframes and founder roadmaps into reliable production code.
                 </p>
               </div>
 
@@ -58,11 +62,11 @@ export default function AboutComp() {
                 <div className="flex items-center gap-2">
                   <CheckIcon className="w-4 h-4 text-accent shrink-0" />
                   <h4 className="font-serif font-bold text-sm text-textI">
-                    Real-Time Communications
+                    AI-Accelerated Velocity
                   </h4>
                 </div>
                 <p className="text-xs text-textII font-light leading-relaxed">
-                  Low-latency WebRTC conferencing, live WebSockets, and media streaming.
+                  Leveraging LLMs and AI developer tools to compress sprint delivery timelines.
                 </p>
               </div>
 
@@ -70,11 +74,11 @@ export default function AboutComp() {
                 <div className="flex items-center gap-2">
                   <CheckIcon className="w-4 h-4 text-accent shrink-0" />
                   <h4 className="font-serif font-bold text-sm text-textI">
-                    FinTech Reliability
+                    FinTech & Payment Systems
                   </h4>
                 </div>
                 <p className="text-xs text-textII font-light leading-relaxed">
-                  Idempotent payment pipelines via Stripe and Paystack with compliance.
+                  High-reliability billing pipelines and checkout architectures via Stripe & Paystack.
                 </p>
               </div>
 
@@ -82,11 +86,11 @@ export default function AboutComp() {
                 <div className="flex items-center gap-2">
                   <CheckIcon className="w-4 h-4 text-accent shrink-0" />
                   <h4 className="font-serif font-bold text-sm text-textI">
-                    Type-Safe Systems
+                    Multi-Tenant SaaS & Real-Time
                   </h4>
                 </div>
                 <p className="text-xs text-textII font-light leading-relaxed">
-                  End-to-end schema validation with Zod, TypeScript, and TanStack Query.
+                  Strict tenant data isolation, RBAC, WebSockets, and low-latency WebRTC media.
                 </p>
               </div>
             </div>
@@ -95,7 +99,7 @@ export default function AboutComp() {
 
         {/* Right Column: Editorial Portrait & Academic Foundation */}
         <div className="lg:col-span-5 space-y-6 animate-on-scroll order-1 lg:order-2 w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none">
-          {/* Framed Editorial Portrait (Cleaned up, no AI 'FIG' tags) */}
+          {/* Framed Editorial Portrait */}
           <div className="relative group p-2 rounded border border-border bg-bg-secondary/30">
             <div className="relative aspect-[4/5] overflow-hidden rounded bg-black/80 border border-border-gold">
               <img
@@ -109,7 +113,7 @@ export default function AboutComp() {
                   David Abolade
                 </span>
                 <span className="font-mono text-xs text-accent tracking-widest uppercase">
-                  Software Developer & Systems Architect
+                  Full-Stack Developer & Product Builder
                 </span>
               </div>
             </div>
@@ -118,7 +122,7 @@ export default function AboutComp() {
           {/* Academic & Professional Coordinates */}
           <div className="p-5 sm:p-6 rounded border border-border bg-bg-secondary/40 space-y-4">
             <span className="font-mono text-[11px] uppercase tracking-widest text-accent block pb-2 border-b border-border">
-              Academic & Professional Foundation
+              Background & Coordinates
             </span>
 
             <div className="space-y-3 text-sm">
@@ -133,13 +137,13 @@ export default function AboutComp() {
                   Obafemi Awolowo University (OAU)
                 </span>
                 <p className="text-xs text-textIII font-light mt-1">
-                  Structural systems design, quantitative modeling & analytical problem-solving.
+                  Rigorous analytical foundation, structural problem-solving, and systems design.
                 </p>
               </div>
 
               <div className="pt-2 border-t border-hairline flex justify-between items-center text-xs font-mono">
                 <span className="text-textIII">Location:</span>
-                <span className="text-textI font-medium">Lagos, Nigeria (UTC+1)</span>
+                <span className="text-textI font-medium">Lagos, Nigeria // Remote Globally</span>
               </div>
 
               <div className="flex justify-between items-center text-xs font-mono">

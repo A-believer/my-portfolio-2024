@@ -25,8 +25,8 @@ export default function ContactComp() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const mailtoUrl = `mailto:davidabolade29@gmail.com?subject=Project Inquiry from ${encodeURIComponent(
-      formData.name || "Client"
+    const mailtoUrl = `mailto:davidabolade29@gmail.com?subject=Strategic Inquiry from ${encodeURIComponent(
+      formData.name || "Founder"
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
@@ -38,8 +38,8 @@ export default function ContactComp() {
       {/* Chapter 05 Header */}
       <SectionHeaderComp
         chapter="05"
-        title="CONTACT & INQUIRIES"
-        subtitle="ENGINEERING APPOINTMENTS, COLLABORATIONS & ROLES"
+        title="GET IN TOUCH"
+        subtitle="FULL-TIME ROLES, STRATEGIC APPOINTMENTS & PRODUCT BUILDS"
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
@@ -47,10 +47,10 @@ export default function ContactComp() {
         <div className="lg:col-span-6 space-y-6 sm:space-y-8 animate-on-scroll">
           <div className="space-y-3 sm:space-y-4">
             <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-textI leading-tight">
-              Let&apos;s build scalable systems together.
+              Ready to build something impactful together?
             </h3>
             <p className="text-textII text-sm sm:text-base md:text-lg font-light leading-relaxed">
-              Available for full-time senior engineering opportunities, technical consulting, and high-impact web development.
+              Available for full-time senior engineering opportunities, high-velocity product launches, and technical partnerships. Let&apos;s turn your vision into revenue-generating reality.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function ContactComp() {
               <div className="flex items-center justify-between">
                 <span className="font-mono text-[11px] sm:text-xs text-accent uppercase tracking-wider flex items-center gap-2">
                   <EnvelopeIcon className="w-4 h-4" />
-                  <span>Email</span>
+                  <span>Direct Email</span>
                 </span>
                 <button
                   onClick={copyEmail}
@@ -97,7 +97,7 @@ export default function ContactComp() {
                   <span>Direct Messaging // WhatsApp</span>
                 </span>
                 <span className="font-mono text-[10px] text-textIII uppercase">
-                  Active
+                  Available
                 </span>
               </div>
 
@@ -161,21 +161,21 @@ export default function ContactComp() {
                 Send a Message
               </span>
               <span className="font-mono text-[10px] text-textIII uppercase">
-                Fast Response
+                Response &lt; 24h
               </span>
             </div>
 
             <div className="space-y-4">
               <div>
                 <label className="font-mono text-xs text-textIII uppercase block mb-1.5">
-                  Your Name / Organization
+                  Your Name / Company
                 </label>
                 <input
                   type="text"
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="e.g. Alex Morgan / Tech Team"
+                  placeholder="e.g. Alex Morgan / Founder at TechCo"
                   className="w-full px-4 py-3 rounded bg-bg-tertiary border border-border focus:border-accent text-textI text-base sm:text-sm focus:outline-none transition-colors"
                 />
               </div>
@@ -203,7 +203,7 @@ export default function ContactComp() {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Project overview, role requirements, or collaboration goals..."
+                  placeholder="Tell me about your product, role requirements, or project roadmap..."
                   className="w-full px-4 py-3 rounded bg-bg-tertiary border border-border focus:border-accent text-textI text-base sm:text-sm focus:outline-none transition-colors resize-none"
                 ></textarea>
               </div>

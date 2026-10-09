@@ -2,9 +2,9 @@ import "./globals.css";
 import { ThemeProvider } from "../context/ThemeContext";
 
 export const metadata = {
-  title: "David Abolade — Full-Stack Developer & Software Architect",
+  title: "David Abolade — Full-Stack Developer & Product Builder",
   description:
-    "Editorial portfolio of David Abolade, a Senior Full-Stack Developer & Software Architect crafting mission-critical platforms, enterprise SaaS, and resilient digital architectures.",
+    "Portfolio of David Abolade, a Full-Stack Software Developer & Product Builder. Shipping high-scale SaaS, FinTech payments (Stripe/Paystack), and real-time systems with modern engineering and AI-accelerated velocity.",
   icons: {
     icon: "/logo.svg",
   },

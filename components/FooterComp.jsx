@@ -29,27 +29,27 @@ export default function FooterComp() {
         {/* Navigation Chapter Jumps */}
         <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 text-textII text-xs">
           <li>
-            <a href="#project" className="hover:text-accent transition-colors">
+            <a href="#project" className="hover:text-white transition-colors duration-200">
               01 // Work
             </a>
           </li>
           <li>
-            <a href="#experience" className="hover:text-accent transition-colors">
-              02 // Experience
+            <a href="#playbook" className="hover:text-white transition-colors duration-200">
+              02 // Playbook
             </a>
           </li>
           <li>
-            <a href="#about" className="hover:text-accent transition-colors">
+            <a href="#about" className="hover:text-white transition-colors duration-200">
               03 // About
             </a>
           </li>
           <li>
-            <a href="#tools" className="hover:text-accent transition-colors">
+            <a href="#tools" className="hover:text-white transition-colors duration-200">
               04 // Arsenal
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-accent transition-colors">
+            <a href="#contact" className="hover:text-white transition-colors duration-200">
               05 // Contact
             </a>
           </li>
@@ -58,7 +58,7 @@ export default function FooterComp() {
         {/* Back to top button */}
         <button
           onClick={scrollToTop}
-          className="flex items-center gap-1.5 px-3 py-2 rounded border border-border text-textII hover:text-accent hover:border-accent transition-all cursor-pointer text-xs"
+          className="flex items-center gap-1.5 px-3 py-2 rounded border border-border text-textII hover:text-white hover:border-accent transition-all cursor-pointer text-xs"
           aria-label="Back to top"
         >
           <span>BACK TO TOP</span>

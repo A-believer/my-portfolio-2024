@@ -7,7 +7,7 @@ import ScrollProgress from "../components/ScrollProgress";
 import TechMarquee from "../components/TechMarquee";
 import HeroComp from "../sections/HeroComp";
 import ProjectComp from "../sections/ProjectComp";
-import ExperienceComp from "../sections/ExperienceComp";
+import ArchitecturePlaybook from "../sections/ArchitecturePlaybook";
 import AboutComp from "../sections/AboutComp";
 import ToolsComp from "../sections/ToolsComp";
 import ContactComp from "../sections/ContactComp";
@@ -33,7 +33,7 @@ export default function Home() {
 
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-14 xl:px-16">
         <ProjectComp />
-        <ExperienceComp />
+        <ArchitecturePlaybook />
         <AboutComp />
         <ToolsComp />
         <ContactComp />

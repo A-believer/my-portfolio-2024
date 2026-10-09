@@ -120,6 +120,49 @@ body {
   background-color: var(--accent-hover);
 }
 
+/* Hover: Make grey text pure white on hover */
+.text-textII:hover,
+.text-textIII:hover,
+a.text-textII:hover,
+a.text-textIII:hover,
+button.text-textII:hover,
+button.text-textIII:hover,
+li.text-textII:hover,
+span.text-textII:hover,
+span.text-textIII:hover,
+p.text-textII:hover,
+p.text-textIII:hover,
+.hover-white:hover,
+a:hover .text-textII,
+a:hover .text-textIII,
+button:hover .text-textII,
+button:hover .text-textIII,
+.group:hover .text-textII,
+.group:hover .text-textIII {
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .text-textII:hover,
+[data-theme="light"] .text-textIII:hover,
+[data-theme="light"] a.text-textII:hover,
+[data-theme="light"] a.text-textIII:hover,
+[data-theme="light"] button.text-textII:hover,
+[data-theme="light"] button.text-textIII:hover,
+[data-theme="light"] li.text-textII:hover,
+[data-theme="light"] span.text-textII:hover,
+[data-theme="light"] span.text-textIII:hover,
+[data-theme="light"] p.text-textII:hover,
+[data-theme="light"] p.text-textIII:hover,
+[data-theme="light"] .hover-white:hover,
+[data-theme="light"] a:hover .text-textII,
+[data-theme="light"] a:hover .text-textIII,
+[data-theme="light"] button:hover .text-textII,
+[data-theme="light"] button:hover .text-textIII,
+[data-theme="light"] .group:hover .text-textII,
+[data-theme="light"] .group:hover .text-textIII {
+  color: #12141A !important;
+}
+
 /* Gold Gradient & Editorial Accents */
 .gold-gradient-text {
   background: linear-gradient(135deg, var(--textI) 0%, var(--accent) 70%, var(--accent-hover) 100%);
@@ -149,14 +192,14 @@ body {
 
 /* Editorial Glass & Blur */
 .glass-editorial {
-  background: rgba(14, 16, 21, 0.88);
+  background: rgba(14, 16, 21, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 
 [data-theme="light"] .glass-editorial {
-  background: rgba(246, 245, 241, 0.92);
+  background: rgba(246, 245, 241, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);

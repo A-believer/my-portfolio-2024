@@ -10,10 +10,10 @@ const projects = [
     id: "cerium6",
     index: "01",
     name: "Cerium6 // Enterprise LIMS SaaS",
-    subtitle: "Multi-Tenant Laboratory Information Management System",
+    subtitle: "Multi-Tenant Laboratory Management Platform",
     category: "Enterprise SaaS",
     description:
-      "Engineered multi-tenant laboratory SaaS architecture featuring tenant data isolation, role-based access control (RBAC), automated certificate PDF generation with digital signature verification, and high-density analytical data grids.",
+      "Enterprise SaaS serving clinical diagnostic centers. Automated compliant lab certificate PDF generation with digital signature verification, cutting manual turnaround time to zero. Built with strict role-based data isolation.",
     tags: ["#NEXTJS14", "#FIREBASE", "#TANSTACK-TABLE", "#RECHARTS", "#ZOD", "#REDUX"],
     githubUrl: "https://github.com/A-believer/Labwox",
     liveUrl: "https://labsoft-report-app.vercel.app/",
@@ -24,10 +24,10 @@ const projects = [
     id: "mmos",
     index: "02",
     name: "Market Master USA // MMOS Suite",
-    subtitle: "WebRTC Virtual Conferencing & Operations Platform",
+    subtitle: "Real-Time WebRTC Conferencing & Operations Suite",
     category: "Full-Stack",
     description:
-      "Enterprise operations suite featuring multi-user WebRTC audio/video conferencing, real-time screen sharing, dynamic room routing, automated FFmpeg media transcoding, and business credit tracking dashboards.",
+      "Full-stack operations hub featuring low-latency WebRTC multi-user video/audio conferencing, live screen streaming, custom FFmpeg media processing, and automated credit monitoring workflows.",
     tags: ["#REACT", "#TYPESCRIPT", "#WEBRTC", "#WEBSOCKETS", "#NODEJS", "#TAILWIND"],
     githubUrl: "https://github.com/A-believer/mmos",
     liveUrl: "https://marketmasterusa.com",
@@ -35,13 +35,27 @@ const projects = [
     featured: true,
   },
   {
-    id: "google-drive-clone",
+    id: "teachmate-todo",
     index: "03",
+    name: "TeachMate // AI Curriculum & Task Engine",
+    subtitle: "AI-Assisted Educational Planning & Priority Matrix",
+    category: "AI & Web Apps",
+    description:
+      "AI-powered productivity application for educators. Features automated curriculum breakdowns, prompt-driven milestone planning, and offline-first state persistence for seamless daily classroom tracking.",
+    tags: ["#REACT", "#AI-INTEGRATION", "#TYPESCRIPT", "#PRODUCTIVITY", "#LOCALSTORAGE"],
+    githubUrl: "https://github.com/A-believer/teachmateai-task-manager",
+    liveUrl: "https://teachmateai-task-manager.vercel.app/",
+    image: "/assets/teachmate-todo.png",
+    featured: true,
+  },
+  {
+    id: "google-drive-clone",
+    index: "04",
     name: "CloudVault // Cloud Storage Engine",
-    subtitle: "Real-Time Cloud Storage & Document Sync System",
+    subtitle: "Distributed File Management & Real-Time Sync",
     category: "Full-Stack",
     description:
-      "Full-stack cloud file vault built with reactive database queries, tree-structured folder hierarchies, multi-file uploads, Clerk authentication, and real-time state synchronization.",
+      "High-speed cloud file storage system built with reactive database queries, tree-structured folder hierarchies, multi-file concurrent uploads, Clerk authentication, and live state synchronization.",
     tags: ["#NEXTJS15", "#TYPESCRIPT", "#CONVEX-DB", "#CLERK-AUTH", "#RADIX-UI"],
     githubUrl: "https://github.com/A-believer/google-drive-clone",
     liveUrl: "https://github.com/A-believer/google-drive-clone",
@@ -50,12 +64,12 @@ const projects = [
   },
   {
     id: "geegpay-dashboard",
-    index: "04",
+    index: "05",
     name: "Geegpay // FinTech Analytics Dashboard",
-    subtitle: "Multi-Currency Financial Metrics & Transaction Engine",
+    subtitle: "Multi-Currency Banking & Transaction Intelligence",
     category: "FinTech",
     description:
-      "Interactive financial analytics dashboard featuring live currency exchange metrics, automated payout workflows, interactive cashflow charts, and high-security transaction monitoring.",
+      "Financial analytics dashboard featuring live multi-currency exchange rates, automated payout transaction flows, interactive cashflow charts, and high-security transaction monitoring.",
     tags: ["#REACT", "#TYPESCRIPT", "#CHARTJS", "#FINTECH", "#TAILWIND"],
     githubUrl: "https://github.com/A-believer/geegpay-dashboard",
     liveUrl: "https://geegpay-dashboard-sigma.vercel.app/",
@@ -64,12 +78,12 @@ const projects = [
   },
   {
     id: "s-e-mind-reset",
-    index: "05",
+    index: "06",
     name: "S-E Mind Reset // HealthTech Platform",
     subtitle: "Clinical Wellness & Patient Intake Architecture",
-    category: "HealthTech",
+    category: "AI & Web Apps",
     description:
-      "Clinical wellness platform featuring structured psychiatric onboarding flows, validated client intake pipelines, and state management via Redux Toolkit and TanStack Query with HIPAA data protection principles.",
+      "Clinical wellness platform featuring structured patient onboarding flows, validated diagnostic surveys, and reliable multi-step state management adhering to HIPAA privacy standards.",
     tags: ["#NEXTJS15", "#REACT19", "#TANSTACK-QUERY", "#REDUX-TOOLKIT", "#ZOD"],
     githubUrl: "https://github.com/A-believer/s-e-mind-reset-center",
     liveUrl: "https://s-e-mind-reset-center.vercel.app",
@@ -77,27 +91,13 @@ const projects = [
     featured: false,
   },
   {
-    id: "teachmate-todo",
-    index: "06",
-    name: "TeachMate Todo // Educational Task Manager",
-    subtitle: "Curriculum Planning & Priority Matrix for Educators",
-    category: "Web App",
-    description:
-      "Task management application designed for educators to structure curricula, organize classroom priorities, and track daily teaching milestones with zero latency.",
-    tags: ["#REACT", "#TYPESCRIPT", "#PRODUCTIVITY", "#LOCALSTORAGE"],
-    githubUrl: "https://github.com/A-believer/teachmateai-task-manager",
-    liveUrl: "https://teachmateai-task-manager.vercel.app/",
-    image: "/assets/teachmate-todo.png",
-    featured: false,
-  },
-  {
     id: "getlinked-ai",
     index: "07",
-    name: "GetLinked // Hackathon Platform",
-    subtitle: "Event Registration & Countdown Architecture",
-    category: "Frontend",
+    name: "GetLinked // Hackathon Event Portal",
+    subtitle: "High-Traffic Event Registration & Live Countdown",
+    category: "AI & Web Apps",
     description:
-      "Hackathon portal with responsive layouts, fluid glassmorphic UI, real-time registration counters, and interactive schedule timeline components.",
+      "Tech hackathon portal built with fluid glassmorphic UI, real-time participant registration counters, and interactive schedule timeline components engineered for high-traffic surges.",
     tags: ["#REACT", "#FRAMER-MOTION", "#TAILWIND", "#UI-UX"],
     githubUrl: "https://github.com/A-believer/get-linked",
     liveUrl: "https://get-linked-ai.vercel.app/",
@@ -108,10 +108,10 @@ const projects = [
     id: "streams-foundation",
     index: "08",
     name: "Streams Foundation // Non-Profit Portal",
-    subtitle: "Community Portal & Program Engagement",
-    category: "Frontend",
+    subtitle: "Community Portal & Global Engagement",
+    category: "Full-Stack",
     description:
-      "Translated Figma design systems into accessible, performant Next.js applications with optimized asset loading, accessible forms, and localized content delivery.",
+      "Next.js web platform translating Figma design systems into accessible, performant software with optimized asset delivery, accessible forms, and localized content.",
     tags: ["#NEXTJS", "#TYPESCRIPT", "#FIGMA", "#REST-APIS"],
     githubUrl: "https://github.com/A-believer/stream-web-app",
     liveUrl: "https://stream-web-app-one.vercel.app",
@@ -123,9 +123,9 @@ const projects = [
     index: "09",
     name: "Dudurewa // Culinary Commerce System",
     subtitle: "Online Ordering & Kitchen Dispatch Architecture",
-    category: "Web App",
+    category: "Full-Stack",
     description:
-      "Food ordering web application with dynamic cart calculations, custom checkout workflows, and fast server-side menu rendering.",
+      "Restaurant e-commerce web application with real-time cart calculations, responsive menus, and fast checkout dispatch workflows.",
     tags: ["#NEXTJS", "#TAILWIND", "#PHP", "#ECOMMERCE"],
     githubUrl: "https://github.com/A-believer",
     liveUrl: "https://dudurewas-kitchen.vercel.app/",
@@ -134,7 +134,7 @@ const projects = [
   },
 ];
 
-const categories = ["ALL", "ENTERPRISE SAAS", "FULL-STACK", "FINTECH", "HEALTHTECH", "FRONTEND"];
+const categories = ["ALL", "ENTERPRISE SAAS", "FULL-STACK", "FINTECH", "AI & WEB APPS"];
 
 export default function ProjectComp() {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -146,8 +146,7 @@ export default function ProjectComp() {
           if (activeCategory === "ENTERPRISE SAAS") return p.category === "Enterprise SaaS";
           if (activeCategory === "FULL-STACK") return p.category === "Full-Stack" || p.category === "Enterprise SaaS";
           if (activeCategory === "FINTECH") return p.category === "FinTech";
-          if (activeCategory === "HEALTHTECH") return p.category === "HealthTech";
-          if (activeCategory === "FRONTEND") return p.category === "Frontend" || p.category === "Web App";
+          if (activeCategory === "AI & WEB APPS") return p.category === "AI & Web Apps";
           return true;
         });
 
@@ -157,7 +156,7 @@ export default function ProjectComp() {
       <SectionHeaderComp
         chapter="01"
         title="SELECTED WORK"
-        subtitle="PRODUCTION CASE STUDIES & APPLICATIONS"
+        subtitle="PRODUCTION PRODUCTS SHIPPED & SCALED"
       />
 
       {/* Horizontally scrollable category filter for mobile and tablet */}

@@ -5,20 +5,18 @@ import SectionHeaderComp from "../components/SectionHeaderComp";
 const experiences = [
   {
     initials: "MM",
-    role: "Front-end Software (Web) Developer",
+    role: "Front-end Software Developer",
     company: "Market Master USA",
     location: "Remote, USA",
     period: "Oct 2024 – Present",
-    scope: "Real-Time Communications, WebRTC Media Processing & SaaS Dashboards",
+    scope: "Real-Time Comms, WebRTC Media Processing & SaaS Dashboards",
     highlights: [
-      "Architected and deployed 20+ web applications using React, TypeScript, Node.js, and WebSockets across real-time communications, construction tech, healthcare, and financial services.",
-      "Engineered WebRTC-powered virtual conference platform supporting multi-user video/audio calls, screen sharing, dynamic room routing, and custom FFmpeg media processing.",
-      "Spearheaded the Zenith Properties software suite, constructing connected Client, Contractor, and Admin dashboards that automated inspection requests and job management workflows.",
-      "Engineered automated credit tracking & dispute tools empowering users to monitor financial health across personal and business credit categories.",
-      "Developed HIPAA-mindful patient referral tracking system, improving provider-to-patient intake turnarounds and clinical case oversight.",
-      "Standardized modern UI/UX design systems, building reusable component libraries with dark mode support and fluid micro-animations.",
+      "Architected and shipped 20+ production web applications across real-time comms, FinTech, and operations, leveraging AI-assisted developer workflows to cut feature turnaround times.",
+      "Engineered a WebRTC virtual conferencing platform supporting multi-user video/audio calls, screen sharing, dynamic room routing, and automated FFmpeg media processing.",
+      "Built the Zenith Properties management suite, automating inspection requests and contractor job dispatch across connected dashboards.",
+      "Shipped automated personal and business credit tracking & dispute tools, empowering users to monitor financial health in real time.",
     ],
-    skills: ["#REACT", "#TYPESCRIPT", "#WEBRTC", "#WEBSOCKETS", "#NODEJS", "#FFMPEG", "#TAILWIND"],
+    skills: ["#REACT", "#TYPESCRIPT", "#WEBRTC", "#WEBSOCKETS", "#NODEJS", "#AI-WORKFLOWS", "#TAILWIND"],
   },
   {
     initials: "LW",
@@ -28,10 +26,10 @@ const experiences = [
     period: "Apr 2023 – Present",
     scope: "Cerium6 / LabSoft — Enterprise Multi-Tenant LIMS SaaS Platform",
     highlights: [
-      "Architected a 3-tier multi-tenant LIMS SaaS platform using Next.js 14 and Firebase, implementing strict RBAC and data isolation between diagnostic centers.",
-      "Engineered an automated serverless PDF generation engine for compliant laboratory certificates, featuring digital signature verification and dynamic layouts.",
-      "Constructed high-performance analytical dashboards and data grids using TanStack Table, Recharts, and Redux Toolkit handling thousands of concurrent clinical records.",
-      "Implemented robust document parsing pipelines (SheetJS, Mammoth) for automated batch test result ingestion.",
+      "Built a 3-tier multi-tenant LIMS SaaS platform using Next.js 14 and Firebase, enforcing strict tenant data isolation and role-based access control.",
+      "Engineered an automated serverless PDF generation engine for compliant lab test certificates with digital signatures, eliminating manual processing bottlenecks.",
+      "Delivered high-performance analytical data grids handling thousands of concurrent clinical records using TanStack Table, Recharts, and Redux Toolkit.",
+      "Implemented document parsing pipelines (SheetJS, Mammoth) for automated batch test result ingestion.",
     ],
     skills: ["#NEXTJS14", "#FIREBASE", "#TANSTACK-TABLE", "#REDUX-TOOLKIT", "#RECHARTS", "#ZOD"],
   },
@@ -43,8 +41,8 @@ const experiences = [
     period: "Apr 2024 – Jun 2024",
     scope: "Internal Enterprise Management System Optimization",
     highlights: [
-      "Refined the enterprise management system’s interface using Vue.js to deliver a more intuitive, cohesive user experience.",
-      "Architected backend API integrations to eliminate navigation bottlenecks, resulting in a 15% surge in overall user engagement metrics.",
+      "Redesigned the enterprise management system interface using Vue.js to deliver a fast, intuitive workflow for internal operators.",
+      "Refactored backend API integrations to eliminate navigation bottlenecks, driving a 15% increase in user task completion rates.",
     ],
     skills: ["#VUEJS", "#JAVASCRIPT", "#REST-APIS", "#STATE-MANAGEMENT"],
   },
@@ -56,8 +54,8 @@ const experiences = [
     period: "Dec 2023 – Mar 2024",
     scope: "Community Empowerment Web Application",
     highlights: [
-      "Translated Figma mockups for community portals and profile dashboards into high-fidelity, accessible Next.js applications.",
-      "Engineered seamless API integrations for real-time data rendering while partnering on rapid iterative design cycles.",
+      "Translated Figma design systems into responsive Next.js web applications with accessible components and fast asset delivery.",
+      "Integrated real-time REST APIs for dynamic content rendering while collaborating on rapid iterative design sprints.",
     ],
     skills: ["#NEXTJS", "#TYPESCRIPT", "#TAILWIND", "#FIGMA"],
   },
@@ -67,10 +65,10 @@ const experiences = [
     company: "Hotels NG (Zuri HNGix)",
     location: "Remote, Nigeria",
     period: "Sep 2023 – Oct 2023",
-    scope: "Agile Production Engineering Sprints",
+    scope: "Fast-Paced Agile Production Sprints",
     highlights: [
-      "Developed responsive web applications using React and Tailwind CSS, ensuring cross-browser performance and accessibility.",
-      "Collaborated with cross-functional engineering pods to resolve priority blockers under fast-paced agile development cycles.",
+      "Delivered responsive web applications using React and Tailwind CSS under high-pressure, fast-paced sprint cycles.",
+      "Partnered with cross-functional pods to debug critical issues and ship production features on strict deadlines.",
     ],
     skills: ["#REACT", "#TAILWIND", "#JAVASCRIPT", "#AGILE"],
   },
@@ -83,7 +81,7 @@ export default function ExperienceComp() {
       <SectionHeaderComp
         chapter="02"
         title="EXPERIENCE"
-        subtitle="CAREER TRAJECTORY & TECHNICAL LEADERSHIP"
+        subtitle="CAREER IMPACT & PROVEN EXECUTION"
       />
 
       {/* Experience Timeline Rows */}

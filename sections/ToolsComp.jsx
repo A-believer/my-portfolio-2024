@@ -5,16 +5,16 @@ import LanguageComp from "../components/LanguageComp";
 import ToolComp from "../components/ToolComp";
 
 const competencies = [
-  "Multi-Tenant SaaS Architecture",
-  "FinTech Gateways (Stripe & Paystack)",
-  "Real-Time WebSockets & WebRTC Media",
-  "Automated PDF Generation & Signatures",
-  "Strict RBAC & Tenant Data Isolation",
-  "TanStack Table & Recharts Dashboards",
-  "Batch Document Ingestion (SheetJS / Mammoth)",
-  "Runtime Schema Validation (Zod / Hook Form)",
-  "HIPAA & Financial Privacy Compliance",
-  "Agile & Cross-Functional Engineering Sprints",
+  "AI-Augmented Development (2-3x Velocity)",
+  "0-to-1 Product Scaffolding & Rapid MVP Delivery",
+  "FinTech Checkout & Subscriptions (Stripe & Paystack)",
+  "Multi-Tenant SaaS Architecture & Strict RBAC",
+  "Real-Time WebRTC Media & WebSockets",
+  "Automated PDF Generation & Digital Signatures",
+  "TanStack Table & Recharts Analytics",
+  "Type-Safe APIs & Schema Validation (Zod)",
+  "Idempotent Webhooks & Event-Driven Systems",
+  "Agile Ownership & Direct Founder Collaboration",
 ];
 
 export default function ToolsComp() {
@@ -24,7 +24,7 @@ export default function ToolsComp() {
       <SectionHeaderComp
         chapter="04"
         title="TECHNICAL ARSENAL"
-        subtitle="LANGUAGES, RUNTIMES, INFRASTRUCTURE & PERSISTENCE"
+        subtitle="LANGUAGES, AI WORKFLOWS & PRODUCTION INFRASTRUCTURE"
       />
 
       {/* 2-Column Domain Grid: 1 col on mobile/tablet, 2 cols on lg */}
@@ -40,11 +40,11 @@ export default function ToolsComp() {
           <LanguageComp />
         </div>
 
-        {/* Domain 02: Libraries & Infrastructure */}
+        {/* Domain 02: AI Workflows, Cloud & Tools */}
         <div className="space-y-4 sm:space-y-6 animate-on-scroll">
           <div className="flex items-baseline justify-between border-b border-border pb-3">
             <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-textI">
-              Libraries, Cloud & Protocols
+              AI Tools, Cloud & Persistence
             </h3>
             <span className="font-mono text-xs text-accent">DOMAIN // 02</span>
           </div>
@@ -52,14 +52,14 @@ export default function ToolsComp() {
         </div>
       </div>
 
-      {/* Domain 03: Specialized Architectural Competencies */}
+      {/* Domain 03: Specialized Production Competencies */}
       <div className="pt-6 sm:pt-8 border-t border-hairline space-y-4 sm:space-y-6 animate-on-scroll">
         <div className="flex items-baseline justify-between">
           <h4 className="font-mono text-xs uppercase tracking-widest text-accent">
-            Domain 03 // Specialized Production Capabilities
+            High-Impact Core Capabilities
           </h4>
           <span className="font-mono text-[10px] text-textIII uppercase hidden sm:inline">
-            Production Tested
+            Battle-Tested in Production
           </span>
         </div>
 

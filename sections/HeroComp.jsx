@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import LinkedInComp from "../components/icons/LinkedInComp";
 import TwitterComp from "../components/icons/TwitterComp";
 import GithubComp from "../components/icons/GithubComp";
-import { ArrowDownIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { ArrowDownIcon, ArrowUpRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
 
 export default function HeroComp() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,11 +17,11 @@ export default function HeroComp() {
   }, []);
 
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[88vh] flex flex-col justify-center py-12 sm:py-16 md:py-20 border-b border-border overflow-hidden">
+    <section className="relative min-h-[82vh] sm:min-h-[86vh] flex flex-col justify-center py-12 sm:py-16 md:py-20 border-b border-border overflow-hidden">
       {/* Editorial Watermark / Subtle Radial Backlight */}
       <div className="absolute top-1/4 right-[-10%] w-[320px] sm:w-[500px] h-[320px] sm:h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-      <div className="relative z-10 w-full flex flex-col space-y-8 sm:space-y-10 md:space-y-12">
+      <div className="relative z-10 w-full flex flex-col space-y-6 sm:space-y-8 md:space-y-10">
         {/* Status / Category Kicker */}
         <div
           className={`flex flex-wrap items-center gap-2 sm:gap-3 transition-all duration-700 ease-out ${
@@ -33,11 +33,12 @@ export default function HeroComp() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
             </span>
-            <span>Available for Full-Stack & Engineering Roles</span>
+            <span>Available for Full-Time Roles & Strategic Contracts</span>
           </span>
           <span className="text-textIII font-mono text-xs hidden sm:inline">•</span>
-          <span className="font-mono text-[11px] sm:text-xs uppercase tracking-wider text-textIII">
-            Lagos, Nigeria // Worldwide Remote
+          <span className="inline-flex items-center gap-1.5 font-mono text-[11px] sm:text-xs uppercase tracking-wider text-textIII">
+            <SparklesIcon className="w-3.5 h-3.5 text-accent" />
+            <span>AI-Augmented Velocity</span>
           </span>
         </div>
 
@@ -53,24 +54,23 @@ export default function HeroComp() {
               Full-Stack Developer &
             </span>
             <span className="block text-accent">
-              Software Architect
+              Product Builder
             </span>
           </h1>
         </div>
 
         {/* Narrative & Metric Columns */}
         <div
-          className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-end pt-2 transition-all duration-700 ease-out delay-200 ${
+          className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-end pt-1 transition-all duration-700 ease-out delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
           {/* Narrative Paragraph */}
           <div className="lg:col-span-8 space-y-6">
             <p className="text-textII text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-              Building scalable, high-performance web applications with over 3+ years of production experience. Specialized in{" "}
-              <strong className="font-medium text-textI">enterprise multi-tenant SaaS</strong>,{" "}
-              <strong className="font-medium text-textI">real-time WebRTC communications</strong>, and{" "}
-              <strong className="font-medium text-textI">FinTech payment architectures</strong> (Stripe, Paystack) engineered for reliability.
+              I build and ship high-impact products from <strong className="text-textI font-medium">0 to 1</strong>. 
+              Combining modern full-stack engineering (<strong className="text-textI font-medium">React, Next.js, TypeScript, Node.js</strong>) with 
+              {" "}<strong className="text-accent font-medium">AI-augmented workflows</strong> to deploy enterprise SaaS, FinTech payments (Stripe, Paystack), and real-time systems faster.
             </p>
 
             {/* Editorial CTAs */}
@@ -79,7 +79,7 @@ export default function HeroComp() {
                 href="#project"
                 className="group px-6 py-3.5 bg-accent text-bgColor font-mono text-xs uppercase tracking-widest font-semibold rounded hover:bg-accent-hover transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
-                <span>View Selected Work</span>
+                <span>Explore Selected Work</span>
                 <ArrowDownIcon className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
               </a>
 
@@ -101,33 +101,33 @@ export default function HeroComp() {
             </div>
           </div>
 
-          {/* Technical Spec Summary Card */}
+          {/* Value Props & Execution Metrics Card */}
           <div className="lg:col-span-4 p-5 sm:p-6 rounded border border-border bg-bg-secondary/50 backdrop-blur-sm space-y-3">
             <div className="flex items-center justify-between pb-2 border-b border-border">
               <span className="font-mono text-[11px] uppercase tracking-widest text-accent">
-                Key Metrics
+                Proven Track Record
               </span>
               <span className="font-mono text-[10px] text-textIII uppercase">
-                Production Verified
+                Production Shipped
               </span>
             </div>
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4 text-xs font-mono">
-              <div className="p-2 rounded bg-bg-tertiary/40 border border-border/40">
+              <div className="p-2.5 rounded bg-bg-tertiary/40 border border-border/40">
                 <span className="text-textIII block uppercase text-[10px]">Experience</span>
                 <span className="text-textI font-semibold text-sm">3+ Years</span>
               </div>
-              <div className="p-2 rounded bg-bg-tertiary/40 border border-border/40">
-                <span className="text-textIII block uppercase text-[10px]">Deployments</span>
+              <div className="p-2.5 rounded bg-bg-tertiary/40 border border-border/40">
+                <span className="text-textIII block uppercase text-[10px]">Shipped Apps</span>
                 <span className="text-textI font-semibold text-sm">20+ Production</span>
               </div>
-              <div className="p-2 rounded bg-bg-tertiary/40 border border-border/40">
-                <span className="text-textIII block uppercase text-[10px]">Primary Stack</span>
-                <span className="text-textI font-semibold text-sm">Next.js / TypeScript</span>
+              <div className="p-2.5 rounded bg-bg-tertiary/40 border border-border/40">
+                <span className="text-textIII block uppercase text-[10px]">Workflow</span>
+                <span className="text-accent font-semibold text-sm">AI-Accelerated</span>
               </div>
-              <div className="p-2 rounded bg-bg-tertiary/40 border border-border/40">
+              <div className="p-2.5 rounded bg-bg-tertiary/40 border border-border/40">
                 <span className="text-textIII block uppercase text-[10px]">FinTech</span>
-                <span className="text-textI font-semibold text-sm">Stripe & Paystack</span>
+                <span className="text-textI font-semibold text-sm">Stripe / Paystack</span>
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function HeroComp() {
           </div>
 
           <span className="text-[11px] tracking-wider uppercase text-textIII/80">
-            SYSTEM ARCHITECTURE & PRODUCTION ENGINEERING
+            HIGH-VELOCITY FULL-STACK & AI-AUGMENTED ENGINEERING
           </span>
         </div>
       </div>
